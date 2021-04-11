@@ -119,46 +119,19 @@ void setup() {
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
     if (analogRead(1) > analogRead(A0)) {
       if (rock_x > 0) {
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
+        rock_x -= 10;
       }
     }
     if (analogRead(5) > analogRead(A0)) {
       if (rock_x < 300) {
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
+        rock_x += 10;
       }
     }
     mylcd.Set_Draw_color(LIGHT_GREY);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
     mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
+    spr1height += 10;
     mylcd.Set_Draw_color(DARK_GREY);
     mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
     delay(slowness);
@@ -171,30 +144,12 @@ void setup() {
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
     if (analogRead(1) > analogRead(A0)) {
       if (rock_x > 0) {
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
+        rock_x -= 10;
       }
     }
     if (analogRead(5) > analogRead(A0)) {
       if (rock_x < 300) {
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
+        rock_x += 10;
       }
     }
     mylcd.Set_Draw_color(LIGHT_GREY);
@@ -202,26 +157,8 @@ void setup() {
     mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
     mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
+    spr1height += 10;
+    spr2height += 10;
     mylcd.Set_Draw_color(DARK_GREY);
     mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
     mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
@@ -258,30 +195,12 @@ void loop() {
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
     if (analogRead(1) > analogRead(A0)) {
       if (rock_x > 0) {
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
+        rock_x -= 10;
       }
     }
     if (analogRead(5) > analogRead(A0)) {
       if (rock_x < 300) {
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
+        rock_x += 10;
       }
     }
     mylcd.Set_Draw_color(LIGHT_GREY);
@@ -290,16 +209,7 @@ void loop() {
   mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
   mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
   spr1height = 0;
-  spr2height = ++spr2height;
-  spr2height = ++spr2height;
-  spr2height = ++spr2height;
-  spr2height = ++spr2height;
-  spr2height = ++spr2height;
-  spr2height = ++spr2height;
-  spr2height = ++spr2height;
-  spr2height = ++spr2height;
-  spr2height = ++spr2height;
-  spr2height = ++spr2height;
+  spr2height += 10;
   mylcd.Set_Draw_color(DARK_GREY);
   mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
   mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
@@ -311,30 +221,12 @@ void loop() {
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
     if (analogRead(1) > analogRead(A0)) {
       if (rock_x > 0) {
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
+        rock_x -= 10;
       }
     }
     if (analogRead(5) > analogRead(A0)) {
       if (rock_x < 300) {
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
+        rock_x += 10;
       }
     }
     mylcd.Set_Draw_color(LIGHT_GREY);
@@ -342,26 +234,8 @@ void loop() {
     mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
     mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
+    spr1height += 10;
+    spr2height += 10;
     mylcd.Set_Draw_color(DARK_GREY);
     mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
     mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
@@ -391,30 +265,12 @@ void loop() {
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
     if (analogRead(1) > analogRead(A0)) {
       if (rock_x > 0) {
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
+        rock_x -= 10;
       }
     }
     if (analogRead(5) > analogRead(A0)) {
       if (rock_x < 300) {
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
+        rock_x += 10;
       }
     }
     mylcd.Set_Draw_color(LIGHT_GREY);
@@ -422,16 +278,7 @@ void loop() {
   mylcd.Set_Draw_color(CYAN);
   mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
   mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
-  spr1height = ++spr1height;
-  spr1height = ++spr1height;
-  spr1height = ++spr1height;
-  spr1height = ++spr1height;
-  spr1height = ++spr1height;
-  spr1height = ++spr1height;
-  spr1height = ++spr1height;
-  spr1height = ++spr1height;
-  spr1height = ++spr1height;
-  spr1height = ++spr1height;
+  spr1height += 10;
   spr2height = 0;
   mylcd.Set_Draw_color(DARK_GREY);
   mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
@@ -444,30 +291,12 @@ void loop() {
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
     if (analogRead(1) > analogRead(A0)) {
       if (rock_x > 0) {
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
-        --rock_x;
+        rock_x -= 10;
       }
     }
     if (analogRead(5) > analogRead(A0)) {
       if (rock_x < 300) {
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
-        ++rock_x;
+        rock_x += 10;
       }
     }
     mylcd.Set_Draw_color(LIGHT_GREY);
@@ -475,26 +304,8 @@ void loop() {
     mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
     mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr1height = ++spr1height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
-    spr2height = ++spr2height;
+    spr1height += 10;
+    spr2height += 10;
     mylcd.Set_Draw_color(DARK_GREY);
     mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
     mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
