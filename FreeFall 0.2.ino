@@ -157,10 +157,10 @@ void setup() {
       }
     }
     if (lives = 0) {
+      lives = 3;
       //TERMINATE
       //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
       //TERMINATE
-      lives = 3;
     }
     delay(slowness);
   }
@@ -215,10 +215,10 @@ void setup() {
       }
     }
     if (lives = 0) {
+      lives = 3;
       //TERMINATE
       //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
       //TERMINATE
-      lives = 3;
     }
     delay(slowness);
   }
@@ -299,10 +299,10 @@ void loop() {
       }
     }
     if (lives = 0) {
+      lives = 3;
       //TERMINATE
       //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
       //TERMINATE
-      lives = 3;
     }
   delay(slowness);
     
@@ -355,10 +355,10 @@ void loop() {
       }
     }
     if (lives = 0) {
+      lives = 3;
       //TERMINATE
       //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
       //TERMINATE
-      lives = 3;
     }
     delay(slowness);
   }
@@ -432,10 +432,10 @@ void loop() {
       }
     }
     if (lives = 0) {
+      lives = 3;
       //TERMINATE
       //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
       //TERMINATE
-      lives = 3;
     }
   delay(slowness);
   
@@ -488,10 +488,10 @@ void loop() {
       }
     }
     if (lives = 0) {
+      lives = 3;
       //TERMINATE
       //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
       //TERMINATE
-      lives = 3;
     }
     delay(slowness);
   }
