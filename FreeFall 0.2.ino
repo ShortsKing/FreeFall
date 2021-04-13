@@ -31,6 +31,7 @@ LCDWIKI_KBV mylcd(ILI9486,40,38,39,-1,41); //model,cs,cd,wr,rd,reset
                                        1-6 - used for input buttons  
 */
 
+int lives = 3;
 
 int fps = 5;
 
@@ -60,22 +61,27 @@ int y2spr2 = 0;
 //set the sprite heights
 int spr1height = 0;
 int spr2height = 0;
-int spr3height = 0;
-int spr4height = 0;
-int spr5height = 0;
-int spr6height = 0;
+
+int spr1side = 0;
+int spr1length = 0;
+int spr2side = 0;
+int spr2length = 0;
 
 void setup() {
   mylcd.Init_LCD();
   mylcd.Fill_Screen(CYAN);
   
-  //get sprites 1 through 6 on the screen
+  //start screen artificial loop goes here \|/
+  
   
   //generate sprite 1 variables
   randomSeed(analogRead(A0));
   int side = random(2);
   randomSeed(analogRead(A0));
   int length = random(50, 170);
+  
+  spr1side = side;
+  spr1length = length;
   
   if (side == 1) {
     x1spr1 = mylcd.Get_Display_Width()-length;
@@ -95,6 +101,9 @@ void setup() {
   side = random(2);
   randomSeed(analogRead(A0));
   length = random(50, 170);
+  
+  spr2side = side;
+  spr2length = length;
   
   if (side == 1) {
     x1spr2 = mylcd.Get_Display_Width()-length;
@@ -135,6 +144,24 @@ void setup() {
     spr1height += 10;
     mylcd.Set_Draw_color(DARK_GREY);
     mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
+    if (spr1height = 230 || spr1height = 240) {
+      if (spr1side = 0) {
+        if (rock_x < spr1length) {
+          --lives;
+        }
+      }
+      else {
+        if (rock_x > (mylcd.Get_Display_Width() - spr1length)) {
+          --lives
+        }
+      }
+    }
+    if (lives = 0) {
+      lives = 3;
+      //TERMINATE
+      //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
+      //TERMINATE
+    }
     delay(slowness);
   }
   
@@ -163,6 +190,36 @@ void setup() {
     mylcd.Set_Draw_color(DARK_GREY);
     mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
     mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
+    if (spr1height = 230 || spr1height = 240) {
+      if (spr1side = 0) {
+        if (rock_x < spr1length) {
+          --lives;
+        }
+      }
+      else {
+        if (rock_x > (mylcd.Get_Display_Width() - spr1length)) {
+          --lives
+        }
+      }
+    }
+    if (spr2height = 230 || spr2height = 240) {
+      if (spr2side = 0) {
+        if (rock_x < spr2length) {
+          --lives;
+        }
+      }
+      else {
+        if (rock_x > (mylcd.Get_Display_Width() - spr2length)) {
+          --lives
+        }
+      }
+    }
+    if (lives = 0) {
+      lives = 3;
+      //TERMINATE
+      //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
+      //TERMINATE
+    }
     delay(slowness);
   }
   
@@ -178,6 +235,9 @@ void loop() {
   side = random(2);
   randomSeed(analogRead(A0));
   length = random(50, 170);
+  
+  spr1side = side;
+  spr1length = length;
   
   if (side == 1) {
     x1spr1 = mylcd.Get_Display_Width()-length;
@@ -214,6 +274,36 @@ void loop() {
   mylcd.Set_Draw_color(DARK_GREY);
   mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
   mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
+  if (spr1height = 230 || spr1height = 240) {
+      if (spr1side = 0) {
+        if (rock_x < spr1length) {
+          --lives;
+        }
+      }
+      else {
+        if (rock_x > (mylcd.Get_Display_Width() - spr1length)) {
+          --lives
+        }
+      }
+    }
+    if (spr2height = 230 || spr2height = 240) {
+      if (spr2side = 0) {
+        if (rock_x < spr2length) {
+          --lives;
+        }
+      }
+      else {
+        if (rock_x > (mylcd.Get_Display_Width() - spr2length)) {
+          --lives
+        }
+      }
+    }
+    if (lives = 0) {
+      lives = 3;
+      //TERMINATE
+      //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
+      //TERMINATE
+    }
   delay(slowness);
     
   for(int i = 1; i < 24; ++i) {
@@ -240,6 +330,36 @@ void loop() {
     mylcd.Set_Draw_color(DARK_GREY);
     mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
     mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
+    if (spr1height = 230 || spr1height = 240) {
+      if (spr1side = 0) {
+        if (rock_x < spr1length) {
+          --lives;
+        }
+      }
+      else {
+        if (rock_x > (mylcd.Get_Display_Width() - spr1length)) {
+          --lives
+        }
+      }
+    }
+    if (spr2height = 230 || spr2height = 240) {
+      if (spr2side = 0) {
+        if (rock_x < spr2length) {
+          --lives;
+        }
+      }
+      else {
+        if (rock_x > (mylcd.Get_Display_Width() - spr2length)) {
+          --lives
+        }
+      }
+    }
+    if (lives = 0) {
+      lives = 3;
+      //TERMINATE
+      //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
+      //TERMINATE
+    }
     delay(slowness);
   }
   
@@ -248,6 +368,9 @@ void loop() {
   side = random(2);
   randomSeed(analogRead(A0));
   length = random(50, 170);
+  
+  spr2side = side;
+  spr2length = length;
   
   if (side == 1) {
     x1spr2 = mylcd.Get_Display_Width()-length;
@@ -284,6 +407,36 @@ void loop() {
   mylcd.Set_Draw_color(DARK_GREY);
   mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
   mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
+  if (spr1height = 230 || spr1height = 240) {
+      if (spr1side = 0) {
+        if (rock_x < spr1length) {
+          --lives;
+        }
+      }
+      else {
+        if (rock_x > (mylcd.Get_Display_Width() - spr1length)) {
+          --lives
+        }
+      }
+    }
+    if (spr2height = 230 || spr2height = 240) {
+      if (spr2side = 0) {
+        if (rock_x < spr2length) {
+          --lives;
+        }
+      }
+      else {
+        if (rock_x > (mylcd.Get_Display_Width() - spr2length)) {
+          --lives
+        }
+      }
+    }
+    if (lives = 0) {
+      lives = 3;
+      //TERMINATE
+      //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
+      //TERMINATE
+    }
   delay(slowness);
   
   for(int i = 1; i < 24; ++i) {
@@ -310,6 +463,36 @@ void loop() {
     mylcd.Set_Draw_color(DARK_GREY);
     mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
     mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
+    if (spr1height = 230 || spr1height = 240) {
+      if (spr1side = 0) {
+        if (rock_x < spr1length) {
+          --lives;
+        }
+      }
+      else {
+        if (rock_x > (mylcd.Get_Display_Width() - spr1length)) {
+          --lives
+        }
+      }
+    }
+    if (spr2height = 230 || spr2height = 240) {
+      if (spr2side = 0) {
+        if (rock_x < spr2length) {
+          --lives;
+        }
+      }
+      else {
+        if (rock_x > (mylcd.Get_Display_Width() - spr2length)) {
+          --lives
+        }
+      }
+    }
+    if (lives = 0) {
+      lives = 3;
+      //TERMINATE
+      //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
+      //TERMINATE
+    }
     delay(slowness);
   }
 }
