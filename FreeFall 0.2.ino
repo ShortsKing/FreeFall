@@ -556,7 +556,7 @@ void setup() {
         }
       }
       else {
-        if (rock_x > (mylcd.Get_Display_Width() - spr1length)) {
+        if ((rock_x+20) > (mylcd.Get_Display_Width() - spr1length)) {
           --lives
         }
       }
@@ -602,7 +602,7 @@ void setup() {
         }
       }
       else {
-        if (rock_x > (mylcd.Get_Display_Width() - spr1length)) {
+        if ((rock_x+20) > (mylcd.Get_Display_Width() - spr1length)) {
           --lives
         }
       }
@@ -614,7 +614,7 @@ void setup() {
         }
       }
       else {
-        if (rock_x > (mylcd.Get_Display_Width() - spr2length)) {
+        if ((rock_x+20) > (mylcd.Get_Display_Width() - spr2length)) {
           --lives
         }
       }
@@ -686,7 +686,7 @@ void loop() {
         }
       }
       else {
-        if (rock_x > (mylcd.Get_Display_Width() - spr1length)) {
+        if ((rock_x+20) > (mylcd.Get_Display_Width() - spr1length)) {
           --lives
         }
       }
@@ -698,7 +698,7 @@ void loop() {
         }
       }
       else {
-        if (rock_x > (mylcd.Get_Display_Width() - spr2length)) {
+        if ((rock_x+20) > (mylcd.Get_Display_Width() - spr2length)) {
           --lives
         }
       }
@@ -742,7 +742,7 @@ void loop() {
         }
       }
       else {
-        if (rock_x > (mylcd.Get_Display_Width() - spr1length)) {
+        if ((rock_x+20) > (mylcd.Get_Display_Width() - spr1length)) {
           --lives
         }
       }
@@ -754,7 +754,7 @@ void loop() {
         }
       }
       else {
-        if (rock_x > (mylcd.Get_Display_Width() - spr2length)) {
+        if ((rock_x+20) > (mylcd.Get_Display_Width() - spr2length)) {
           --lives
         }
       }
@@ -819,7 +819,7 @@ void loop() {
         }
       }
       else {
-        if (rock_x > (mylcd.Get_Display_Width() - spr1length)) {
+        if ((rock_x+20) > (mylcd.Get_Display_Width() - spr1length)) {
           --lives
         }
       }
@@ -831,7 +831,7 @@ void loop() {
         }
       }
       else {
-        if (rock_x > (mylcd.Get_Display_Width() - spr2length)) {
+        if ((rock_x+20) > (mylcd.Get_Display_Width() - spr2length)) {
           --lives
         }
       }
@@ -875,7 +875,7 @@ void loop() {
         }
       }
       else {
-        if (rock_x > (mylcd.Get_Display_Width() - spr1length)) {
+        if ((rock_x+20) > (mylcd.Get_Display_Width() - spr1length)) {
           --lives
         }
       }
@@ -887,7 +887,7 @@ void loop() {
         }
       }
       else {
-        if (rock_x > (mylcd.Get_Display_Width() - spr2length)) {
+        if ((rock_x+20) > (mylcd.Get_Display_Width() - spr2length)) {
           --lives
         }
       }
