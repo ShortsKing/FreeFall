@@ -117,12 +117,12 @@ void setup() {
     //new frame
     mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
-    if (analogRead(1) > analogRead(A0)) {
+    if (analogRead(1) > 1000) {
       if (rock_x > 0) {
         rock_x -= 10;
       }
     }
-    if (analogRead(5) > analogRead(A0)) {
+    if (analogRead(5) > 1000) {
       if (rock_x < 300) {
         rock_x += 10;
       }
@@ -142,12 +142,12 @@ void setup() {
     //new frame
     mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
-    if (analogRead(1) > analogRead(A0)) {
+    if (analogRead(1) > 1000) {
       if (rock_x > 0) {
         rock_x -= 10;
       }
     }
-    if (analogRead(5) > analogRead(A0)) {
+    if (analogRead(5) > 1000) {
       if (rock_x < 300) {
         rock_x += 10;
       }
@@ -193,12 +193,12 @@ void loop() {
   
   mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
-    if (analogRead(1) > analogRead(A0)) {
+    if (analogRead(1) > 1000) {
       if (rock_x > 0) {
         rock_x -= 10;
       }
     }
-    if (analogRead(5) > analogRead(A0)) {
+    if (analogRead(5) > 1000) {
       if (rock_x < 300) {
         rock_x += 10;
       }
@@ -219,12 +219,12 @@ void loop() {
     //new frame
     mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
-    if (analogRead(1) > analogRead(A0)) {
+    if (analogRead(1) > 1000) {
       if (rock_x > 0) {
         rock_x -= 10;
       }
     }
-    if (analogRead(5) > analogRead(A0)) {
+    if (analogRead(5) > 1000) {
       if (rock_x < 300) {
         rock_x += 10;
       }
@@ -263,12 +263,12 @@ void loop() {
   
   mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
-    if (analogRead(1) > analogRead(A0)) {
+    if (analogRead(1) > 1000) {
       if (rock_x > 0) {
         rock_x -= 10;
       }
     }
-    if (analogRead(5) > analogRead(A0)) {
+    if (analogRead(5) > 1000) {
       if (rock_x < 300) {
         rock_x += 10;
       }
@@ -289,12 +289,12 @@ void loop() {
     //new frame
     mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
-    if (analogRead(1) > analogRead(A0)) {
+    if (analogRead(1) > 1000) {
       if (rock_x > 0) {
         rock_x -= 10;
       }
     }
-    if (analogRead(5) > analogRead(A0)) {
+    if (analogRead(5) > 1000) {
       if (rock_x < 300) {
         rock_x += 10;
       }
