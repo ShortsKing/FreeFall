@@ -14,3 +14,7 @@ on who created them.
 
 i hope if you wish to make this yourself, you can, and if i dont by the time you read this, please remind me to add an .rtf document with a list of 
 parts i used. thank you for any support you have given, and i hope you receive the same as anything you have given, wether it be in knowledge or in other help!
+
+
+
+liscense: use for anything other than personal use, and you will die.
