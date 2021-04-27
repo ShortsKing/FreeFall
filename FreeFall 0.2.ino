@@ -68,404 +68,548 @@ int spr2side = 0;
 int spr2length = 0;
 
 void load_lives(int lives) {
-  if (lives = 3) {
+  if (lives == 3) {
     //heart1
     mylcd.Set_Draw_color(BLACK);
-    mylcd.Draw_Pixel(10, mylcd.Get_Display_Width()-2);//1st layer
-    mylcd.Draw_Pixel(9, mylcd.Get_Display_Width()-3);//2nd layer
-    mylcd.Draw_Pixel(11, mylcd.Get_Display_Width()-3);
-    mylcd.Draw_Pixel(8, mylcd.Get_Display_Width()-4);//3rd layer
-    mylcd.Draw_Pixel(12, mylcd.Get_Display_Width()-4);
-    mylcd.Draw_Pixel(7, mylcd.Get_Display_Width()-5);//4th layer
-    mylcd.Draw_Pixel(13, mylcd.Get_Display_Width()-5);
-    mylcd.Draw_Pixel(6, mylcd.Get_Display_Width()-6);//5th layer
-    mylcd.Draw_Pixel(14, mylcd.Get_Display_Width()-6);
-    mylcd.Draw_Pixel(5, mylcd.Get_Display_Width()-7);//6th layer
-    mylcd.Draw_Pixel(15, mylcd.Get_Display_Width()-7);
-    mylcd.Draw_Pixel(4, mylcd.Get_Display_Width()-8);//7th layer
-    mylcd.Draw_Pixel(16, mylcd.Get_Display_Width()-8);
-    mylcd.Draw_Pixel(3, mylcd.Get_Display_Width()-9);//8th layer
-    mylcd.Draw_Pixel(17, mylcd.Get_Display_Width()-9);
-    mylcd.Draw_Pixel(2, mylcd.Get_Display_Width()-10);//9th layer
-    mylcd.Draw_Pixel(18, mylcd.Get_Display_Width()-10);
-    mylcd.Draw_Pixel(2, mylcd.Get_Display_Width()-11);//10th layer
-    mylcd.Draw_Pixel(18, mylcd.Get_Display_Width()-11);
-    mylcd.Draw_Pixel(2, mylcd.Get_Display_Width()-12);//11th layer
-    mylcd.Draw_Pixel(18, mylcd.Get_Display_Width()-12);
-    mylcd.Draw_Pixel(10, mylcd.Get_Display_Width()-12);
-    mylcd.Draw_Pixel(2, mylcd.Get_Display_Width()-13);//12th layer
-    mylcd.Draw_Pixel(18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(11, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(9, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(17, mylcd.Get_Display_Width()-14);//13th layer
-    mylcd.Draw_Pixel(3, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(8, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(12, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(4, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(5, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(6, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(7, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(13, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(14, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(15, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(16, mylcd.Get_Display_Width()-15);
+    mylcd.Draw_Pixel(10, mylcd.Get_Display_Height()-2);//1st layer
+    mylcd.Draw_Pixel(9, mylcd.Get_Display_Height()-3);//2nd layer
+    mylcd.Draw_Pixel(11, mylcd.Get_Display_Height()-3);
+    mylcd.Draw_Pixel(8, mylcd.Get_Display_Height()-4);//3rd layer
+    mylcd.Draw_Pixel(12, mylcd.Get_Display_Height()-4);
+    mylcd.Draw_Pixel(7, mylcd.Get_Display_Height()-5);//4th layer
+    mylcd.Draw_Pixel(13, mylcd.Get_Display_Height()-5);
+    mylcd.Draw_Pixel(6, mylcd.Get_Display_Height()-6);//5th layer
+    mylcd.Draw_Pixel(14, mylcd.Get_Display_Height()-6);
+    mylcd.Draw_Pixel(5, mylcd.Get_Display_Height()-7);//6th layer
+    mylcd.Draw_Pixel(15, mylcd.Get_Display_Height()-7);
+    mylcd.Draw_Pixel(4, mylcd.Get_Display_Height()-8);//7th layer
+    mylcd.Draw_Pixel(16, mylcd.Get_Display_Height()-8);
+    mylcd.Draw_Pixel(3, mylcd.Get_Display_Height()-9);//8th layer
+    mylcd.Draw_Pixel(17, mylcd.Get_Display_Height()-9);
+    mylcd.Draw_Pixel(2, mylcd.Get_Display_Height()-10);//9th layer
+    mylcd.Draw_Pixel(18, mylcd.Get_Display_Height()-10);
+    mylcd.Draw_Pixel(2, mylcd.Get_Display_Height()-11);//10th layer
+    mylcd.Draw_Pixel(18, mylcd.Get_Display_Height()-11);
+    mylcd.Draw_Pixel(2, mylcd.Get_Display_Height()-12);//11th layer
+    mylcd.Draw_Pixel(18, mylcd.Get_Display_Height()-12);
+    mylcd.Draw_Pixel(10, mylcd.Get_Display_Height()-12);
+    mylcd.Draw_Pixel(2, mylcd.Get_Display_Height()-13);//12th layer
+    mylcd.Draw_Pixel(18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(11, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(9, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(17, mylcd.Get_Display_Height()-14);//13th layer
+    mylcd.Draw_Pixel(3, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(8, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(12, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(4, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(5, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(6, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(7, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(13, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(14, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(15, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(16, mylcd.Get_Display_Height()-15);
+    
     mylcd.Set_Draw_color(RED);
+    mylcd.Draw_Pixel(10, mylcd.Get_Display_Height()-3);
+    mylcd.Fill_Rectangle(9, mylcd.Get_Display_Height()-4,`11, mylcd.Get_Display_Height()-4);
+    mylcd.Fill_Rectangle(8, mylcd.Get_Display_Height()-5, 12, mylcd.Get_Display_Height()-5);
+    mylcd.Fill_Rectangle(7, mylcd.Get_Display_Height()-6, 13, mylcd.Get_Display_Height()-6);
+    mylcd.Fill_Rectangle(6, mylcd.Get_Display_Height()-7, 14, mylcd.Get_Display_Height()-7);
+    mylcd.Fill_Rectangle(5, mylcd.Get_Display_Height()-8, 15, mylcd.Get_Display_Height()-8);
+    mylcd.Fill_Rectangle(4, mylcd.Get_Display_Height()-9, 16, mylcd.Get_Display_Height()-9);
+    mylcd.Fill_Rectangle(3, mylcd.Get_Display_Height()-10, 17, mylcd.Get_Display_Height()-10);
+    mylcd.Fill_Rectangle(3, mylcd.Get_Display_Height()-11, 17, mylcd.Get_Display_Height()-11);
+    mylcd.Fill_Rectangle(3, mylcd.Get_Display_Height()-12, 9, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(11, mylcd.Get_Display_Height()-12, 17, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(3, mylcd.Get_Display_Height()-13, 8, mylcd.Get_Display_Height()-13);
+    mylcd.Fill_Rectangle(12, mylcd.Get_Display_Height()-13, 17, mylcd.Get_Display_Height()-13);
+    mylcd.Fill_Rectangle(4, mylcd.Get_Display_Height()-14, 7, mylcd.Get_Display_Height()-14);
+    mylcd.Fill_Rectangle(13, mylcd.Get_Display_Height()-14, 16, mylcd.Get_Display_Height()-14);
     
     mylcd.Set_Draw_color(WHITE);
     
     //heart2
     mylcd.Set_Draw_color(BLACK);
-    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Width()-2);//1st layer
-    mylcd.Draw_Pixel(9+18, mylcd.Get_Display_Width()-3);//2nd layer
-    mylcd.Draw_Pixel(11+18, mylcd.Get_Display_Width()-3);
-    mylcd.Draw_Pixel(8+18, mylcd.Get_Display_Width()-4);//3rd layer
-    mylcd.Draw_Pixel(12+18, mylcd.Get_Display_Width()-4);
-    mylcd.Draw_Pixel(7+18, mylcd.Get_Display_Width()-5);//4th layer
-    mylcd.Draw_Pixel(13+18, mylcd.Get_Display_Width()-5);
-    mylcd.Draw_Pixel(6+18, mylcd.Get_Display_Width()-6);//5th layer
-    mylcd.Draw_Pixel(14+18, mylcd.Get_Display_Width()-6);
-    mylcd.Draw_Pixel(5+18, mylcd.Get_Display_Width()-7);//6th layer
-    mylcd.Draw_Pixel(15+18, mylcd.Get_Display_Width()-7);
-    mylcd.Draw_Pixel(4+18, mylcd.Get_Display_Width()-8);//7th layer
-    mylcd.Draw_Pixel(16+18, mylcd.Get_Display_Width()-8);
-    mylcd.Draw_Pixel(3+18, mylcd.Get_Display_Width()-9);//8th layer
-    mylcd.Draw_Pixel(17+18, mylcd.Get_Display_Width()-9);
-    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Width()-10);//9th layer
-    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Width()-10);
-    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Width()-11);//10th layer
-    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Width()-11);
-    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Width()-12);//11th layer
-    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Width()-12);
-    mylcd.Draw_Pixel(10+18, mylcd.Get_Display_Width()-12);
-    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Width()-13);//12th layer
-    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(11+18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(9+18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(17+18, mylcd.Get_Display_Width()-14);//13th layer
-    mylcd.Draw_Pixel(3+18, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(8+18, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(12+18, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(4+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(5+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(6+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(7+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(13+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(14+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(15+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(16+18, mylcd.Get_Display_Width()-15);
+    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Height()-2);//1st layer
+    mylcd.Draw_Pixel(9+18, mylcd.Get_Display_Height()-3);//2nd layer
+    mylcd.Draw_Pixel(11+18, mylcd.Get_Display_Height()-3);
+    mylcd.Draw_Pixel(8+18, mylcd.Get_Display_Height()-4);//3rd layer
+    mylcd.Draw_Pixel(12+18, mylcd.Get_Display_Height()-4);
+    mylcd.Draw_Pixel(7+18, mylcd.Get_Display_Height()-5);//4th layer
+    mylcd.Draw_Pixel(13+18, mylcd.Get_Display_Height()-5);
+    mylcd.Draw_Pixel(6+18, mylcd.Get_Display_Height()-6);//5th layer
+    mylcd.Draw_Pixel(14+18, mylcd.Get_Display_Height()-6);
+    mylcd.Draw_Pixel(5+18, mylcd.Get_Display_Height()-7);//6th layer
+    mylcd.Draw_Pixel(15+18, mylcd.Get_Display_Height()-7);
+    mylcd.Draw_Pixel(4+18, mylcd.Get_Display_Height()-8);//7th layer
+    mylcd.Draw_Pixel(16+18, mylcd.Get_Display_Height()-8);
+    mylcd.Draw_Pixel(3+18, mylcd.Get_Display_Height()-9);//8th layer
+    mylcd.Draw_Pixel(17+18, mylcd.Get_Display_Height()-9);
+    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Height()-10);//9th layer
+    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Height()-10);
+    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Height()-11);//10th layer
+    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Height()-11);
+    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Height()-12);//11th layer
+    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Height()-12);
+    mylcd.Draw_Pixel(10+18, mylcd.Get_Display_Height()-12);
+    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Height()-13);//12th layer
+    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(11+18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(9+18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(17+18, mylcd.Get_Display_Height()-14);//13th layer
+    mylcd.Draw_Pixel(3+18, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(8+18, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(12+18, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(4+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(5+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(6+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(7+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(13+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(14+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(15+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(16+18, mylcd.Get_Display_Height()-15);
+    
     mylcd.Set_Draw_color(RED);
+    mylcd.Draw_Pixel(10+18, mylcd.Get_Display_Height()-3);
+    mylcd.Fill_Rectangle(9+18, mylcd.Get_Display_Height()-4,`11+18, mylcd.Get_Display_Height()-4);
+    mylcd.Fill_Rectangle(8+18, mylcd.Get_Display_Height()-5, 12+18, mylcd.Get_Display_Height()-5);
+    mylcd.Fill_Rectangle(7+18, mylcd.Get_Display_Height()-6, 13+18, mylcd.Get_Display_Height()-6);
+    mylcd.Fill_Rectangle(6+18, mylcd.Get_Display_Height()-7, 14+18, mylcd.Get_Display_Height()-7);
+    mylcd.Fill_Rectangle(5+18, mylcd.Get_Display_Height()-8, 15+18, mylcd.Get_Display_Height()-8);
+    mylcd.Fill_Rectangle(4+18, mylcd.Get_Display_Height()-9, 16+18, mylcd.Get_Display_Height()-9);
+    mylcd.Fill_Rectangle(3+18, mylcd.Get_Display_Height()-10, 17+18, mylcd.Get_Display_Height()-10);
+    mylcd.Fill_Rectangle(3+18, mylcd.Get_Display_Height()-11, 17+18, mylcd.Get_Display_Height()-11);
+    mylcd.Fill_Rectangle(3+18, mylcd.Get_Display_Height()-12, 9+18, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(11+18, mylcd.Get_Display_Height()-12, 17+18, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(3+18, mylcd.Get_Display_Height()-13, 8+18, mylcd.Get_Display_Height()-13);
+    mylcd.Fill_Rectangle(12+18, mylcd.Get_Display_Height()-13, 17+18, mylcd.Get_Display_Height()-13);
+    mylcd.Fill_Rectangle(4+18, mylcd.Get_Display_Height()-14, 7+18, mylcd.Get_Display_Height()-14);
+    mylcd.Fill_Rectangle(13+18, mylcd.Get_Display_Height()-14, 16+18, mylcd.Get_Display_Height()-14);
     
     mylcd.Set_Draw_color(WHITE);
     
     //heart3
     mylcd.Set_Draw_color(BLACK);
-    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Width()-2);//1st layer
-    mylcd.Draw_Pixel(9+18+18, mylcd.Get_Display_Width()-3);//2nd layer
-    mylcd.Draw_Pixel(11+18+18, mylcd.Get_Display_Width()-3);
-    mylcd.Draw_Pixel(8+18+18, mylcd.Get_Display_Width()-4);//3rd layer
-    mylcd.Draw_Pixel(12+18+18, mylcd.Get_Display_Width()-4);
-    mylcd.Draw_Pixel(7+18+18, mylcd.Get_Display_Width()-5);//4th layer
-    mylcd.Draw_Pixel(13+18+18, mylcd.Get_Display_Width()-5);
-    mylcd.Draw_Pixel(6+18+18, mylcd.Get_Display_Width()-6);//5th layer
-    mylcd.Draw_Pixel(14+18+18, mylcd.Get_Display_Width()-6);
-    mylcd.Draw_Pixel(5+18+18, mylcd.Get_Display_Width()-7);//6th layer
-    mylcd.Draw_Pixel(15+18+18, mylcd.Get_Display_Width()-7);
-    mylcd.Draw_Pixel(4+18+18, mylcd.Get_Display_Width()-8);//7th layer
-    mylcd.Draw_Pixel(16+18+18, mylcd.Get_Display_Width()-8);
-    mylcd.Draw_Pixel(3+18+18, mylcd.Get_Display_Width()-9);//8th layer
-    mylcd.Draw_Pixel(17+18+18, mylcd.Get_Display_Width()-9);
-    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Width()-10);//9th layer
-    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Width()-10);
-    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Width()-11);//10th layer
-    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Width()-11);
-    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Width()-12);//11th layer
-    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Width()-12);
-    mylcd.Draw_Pixel(10+18+18, mylcd.Get_Display_Width()-12);
-    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Width()-13);//12th layer
-    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(11+18+18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(9+18+18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(17+18+18, mylcd.Get_Display_Width()-14);//13th layer
-    mylcd.Draw_Pixel(3+18+18, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(8+18+18, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(12+18+18, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(4+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(5+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(6+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(7+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(13+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(14+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(15+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(16+18+18, mylcd.Get_Display_Width()-15);
+    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Height()-2);//1st layer
+    mylcd.Draw_Pixel(9+18+18, mylcd.Get_Display_Height()-3);//2nd layer
+    mylcd.Draw_Pixel(11+18+18, mylcd.Get_Display_Height()-3);
+    mylcd.Draw_Pixel(8+18+18, mylcd.Get_Display_Height()-4);//3rd layer
+    mylcd.Draw_Pixel(12+18+18, mylcd.Get_Display_Height()-4);
+    mylcd.Draw_Pixel(7+18+18, mylcd.Get_Display_Height()-5);//4th layer
+    mylcd.Draw_Pixel(13+18+18, mylcd.Get_Display_Height()-5);
+    mylcd.Draw_Pixel(6+18+18, mylcd.Get_Display_Height()-6);//5th layer
+    mylcd.Draw_Pixel(14+18+18, mylcd.Get_Display_Height()-6);
+    mylcd.Draw_Pixel(5+18+18, mylcd.Get_Display_Height()-7);//6th layer
+    mylcd.Draw_Pixel(15+18+18, mylcd.Get_Display_Height()-7);
+    mylcd.Draw_Pixel(4+18+18, mylcd.Get_Display_Height()-8);//7th layer
+    mylcd.Draw_Pixel(16+18+18, mylcd.Get_Display_Height()-8);
+    mylcd.Draw_Pixel(3+18+18, mylcd.Get_Display_Height()-9);//8th layer
+    mylcd.Draw_Pixel(17+18+18, mylcd.Get_Display_Height()-9);
+    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Height()-10);//9th layer
+    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Height()-10);
+    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Height()-11);//10th layer
+    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Height()-11);
+    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Height()-12);//11th layer
+    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Height()-12);
+    mylcd.Draw_Pixel(10+18+18, mylcd.Get_Display_Height()-12);
+    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Height()-13);//12th layer
+    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(11+18+18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(9+18+18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(17+18+18, mylcd.Get_Display_Height()-14);//13th layer
+    mylcd.Draw_Pixel(3+18+18, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(8+18+18, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(12+18+18, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(4+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(5+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(6+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(7+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(13+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(14+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(15+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(16+18+18, mylcd.Get_Display_Height()-15);
+    
     mylcd.Set_Draw_color(RED);
+    mylcd.Draw_Pixel(10+18+18, mylcd.Get_Display_Height()-3);
+    mylcd.Fill_Rectangle(9+18+18, mylcd.Get_Display_Height()-4,`11+18+18, mylcd.Get_Display_Height()-4);
+    mylcd.Fill_Rectangle(8+18+18, mylcd.Get_Display_Height()-5, 12+18+18, mylcd.Get_Display_Height()-5);
+    mylcd.Fill_Rectangle(7+18+18, mylcd.Get_Display_Height()-6, 13+18+18, mylcd.Get_Display_Height()-6);
+    mylcd.Fill_Rectangle(6+18+18, mylcd.Get_Display_Height()-7, 14+18+18, mylcd.Get_Display_Height()-7);
+    mylcd.Fill_Rectangle(5+18+18, mylcd.Get_Display_Height()-8, 15+18+18, mylcd.Get_Display_Height()-8);
+    mylcd.Fill_Rectangle(4+18+18, mylcd.Get_Display_Height()-9, 16+18+18, mylcd.Get_Display_Height()-9);
+    mylcd.Fill_Rectangle(3+18+18, mylcd.Get_Display_Height()-10, 17+18+18, mylcd.Get_Display_Height()-10);
+    mylcd.Fill_Rectangle(3+18+18, mylcd.Get_Display_Height()-11, 17+18+18, mylcd.Get_Display_Height()-11);
+    mylcd.Fill_Rectangle(3+18+18, mylcd.Get_Display_Height()-12, 9+18+18, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(11+18+18, mylcd.Get_Display_Height()-12, 17+18+18, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(3+18+18, mylcd.Get_Display_Height()-13, 8+18+18, mylcd.Get_Display_Height()-13);
+    mylcd.Fill_Rectangle(12+18+18, mylcd.Get_Display_Height()-13, 17+18+18, mylcd.Get_Display_Height()-13);
+    mylcd.Fill_Rectangle(4+18+18, mylcd.Get_Display_Height()-14, 7+18+18, mylcd.Get_Display_Height()-14);
+    mylcd.Fill_Rectangle(13+18+18, mylcd.Get_Display_Height()-14, 16+18+18, mylcd.Get_Display_Height()-14);
     
     mylcd.Set_Draw_color(WHITE);
     
   }
-  else if (lives = 2) {
+  else if (lives == 2) {
     //heart1
     mylcd.Set_Draw_color(BLACK);
-    mylcd.Draw_Pixel(10, mylcd.Get_Display_Width()-2);//1st layer
-    mylcd.Draw_Pixel(9, mylcd.Get_Display_Width()-3);//2nd layer
-    mylcd.Draw_Pixel(11, mylcd.Get_Display_Width()-3);
-    mylcd.Draw_Pixel(8, mylcd.Get_Display_Width()-4);//3rd layer
-    mylcd.Draw_Pixel(12, mylcd.Get_Display_Width()-4);
-    mylcd.Draw_Pixel(7, mylcd.Get_Display_Width()-5);//4th layer
-    mylcd.Draw_Pixel(13, mylcd.Get_Display_Width()-5);
-    mylcd.Draw_Pixel(6, mylcd.Get_Display_Width()-6);//5th layer
-    mylcd.Draw_Pixel(14, mylcd.Get_Display_Width()-6);
-    mylcd.Draw_Pixel(5, mylcd.Get_Display_Width()-7);//6th layer
-    mylcd.Draw_Pixel(15, mylcd.Get_Display_Width()-7);
-    mylcd.Draw_Pixel(4, mylcd.Get_Display_Width()-8);//7th layer
-    mylcd.Draw_Pixel(16, mylcd.Get_Display_Width()-8);
-    mylcd.Draw_Pixel(3, mylcd.Get_Display_Width()-9);//8th layer
-    mylcd.Draw_Pixel(17, mylcd.Get_Display_Width()-9);
-    mylcd.Draw_Pixel(2, mylcd.Get_Display_Width()-10);//9th layer
-    mylcd.Draw_Pixel(18, mylcd.Get_Display_Width()-10);
-    mylcd.Draw_Pixel(2, mylcd.Get_Display_Width()-11);//10th layer
-    mylcd.Draw_Pixel(18, mylcd.Get_Display_Width()-11);
-    mylcd.Draw_Pixel(2, mylcd.Get_Display_Width()-12);//11th layer
-    mylcd.Draw_Pixel(18, mylcd.Get_Display_Width()-12);
-    mylcd.Draw_Pixel(10, mylcd.Get_Display_Width()-12);
-    mylcd.Draw_Pixel(2, mylcd.Get_Display_Width()-13);//12th layer
-    mylcd.Draw_Pixel(18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(11, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(9, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(17, mylcd.Get_Display_Width()-14);//13th layer
-    mylcd.Draw_Pixel(3, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(8, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(12, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(4, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(5, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(6, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(7, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(13, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(14, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(15, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(16, mylcd.Get_Display_Width()-15);
+    mylcd.Draw_Pixel(10, mylcd.Get_Display_Height()-2);//1st layer
+    mylcd.Draw_Pixel(9, mylcd.Get_Display_Height()-3);//2nd layer
+    mylcd.Draw_Pixel(11, mylcd.Get_Display_Height()-3);
+    mylcd.Draw_Pixel(8, mylcd.Get_Display_Height()-4);//3rd layer
+    mylcd.Draw_Pixel(12, mylcd.Get_Display_Height()-4);
+    mylcd.Draw_Pixel(7, mylcd.Get_Display_Height()-5);//4th layer
+    mylcd.Draw_Pixel(13, mylcd.Get_Display_Height()-5);
+    mylcd.Draw_Pixel(6, mylcd.Get_Display_Height()-6);//5th layer
+    mylcd.Draw_Pixel(14, mylcd.Get_Display_Height()-6);
+    mylcd.Draw_Pixel(5, mylcd.Get_Display_Height()-7);//6th layer
+    mylcd.Draw_Pixel(15, mylcd.Get_Display_Height()-7);
+    mylcd.Draw_Pixel(4, mylcd.Get_Display_Height()-8);//7th layer
+    mylcd.Draw_Pixel(16, mylcd.Get_Display_Height()-8);
+    mylcd.Draw_Pixel(3, mylcd.Get_Display_Height()-9);//8th layer
+    mylcd.Draw_Pixel(17, mylcd.Get_Display_Height()-9);
+    mylcd.Draw_Pixel(2, mylcd.Get_Display_Height()-10);//9th layer
+    mylcd.Draw_Pixel(18, mylcd.Get_Display_Height()-10);
+    mylcd.Draw_Pixel(2, mylcd.Get_Display_Height()-11);//10th layer
+    mylcd.Draw_Pixel(18, mylcd.Get_Display_Height()-11);
+    mylcd.Draw_Pixel(2, mylcd.Get_Display_Height()-12);//11th layer
+    mylcd.Draw_Pixel(18, mylcd.Get_Display_Height()-12);
+    mylcd.Draw_Pixel(10, mylcd.Get_Display_Height()-12);
+    mylcd.Draw_Pixel(2, mylcd.Get_Display_Height()-13);//12th layer
+    mylcd.Draw_Pixel(18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(11, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(9, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(17, mylcd.Get_Display_Height()-14);//13th layer
+    mylcd.Draw_Pixel(3, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(8, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(12, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(4, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(5, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(6, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(7, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(13, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(14, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(15, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(16, mylcd.Get_Display_Height()-15);
+    
     mylcd.Set_Draw_color(RED);
+    mylcd.Draw_Pixel(10, mylcd.Get_Display_Height()-3);
+    mylcd.Fill_Rectangle(9, mylcd.Get_Display_Height()-4,`11, mylcd.Get_Display_Height()-4);
+    mylcd.Fill_Rectangle(8, mylcd.Get_Display_Height()-5, 12, mylcd.Get_Display_Height()-5);
+    mylcd.Fill_Rectangle(7, mylcd.Get_Display_Height()-6, 13, mylcd.Get_Display_Height()-6);
+    mylcd.Fill_Rectangle(6, mylcd.Get_Display_Height()-7, 14, mylcd.Get_Display_Height()-7);
+    mylcd.Fill_Rectangle(5, mylcd.Get_Display_Height()-8, 15, mylcd.Get_Display_Height()-8);
+    mylcd.Fill_Rectangle(4, mylcd.Get_Display_Height()-9, 16, mylcd.Get_Display_Height()-9);
+    mylcd.Fill_Rectangle(3, mylcd.Get_Display_Height()-10, 17, mylcd.Get_Display_Height()-10);
+    mylcd.Fill_Rectangle(3, mylcd.Get_Display_Height()-11, 17, mylcd.Get_Display_Height()-11);
+    mylcd.Fill_Rectangle(3, mylcd.Get_Display_Height()-12, 9, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(11, mylcd.Get_Display_Height()-12, 17, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(3, mylcd.Get_Display_Height()-13, 8, mylcd.Get_Display_Height()-13);
+    mylcd.Fill_Rectangle(12, mylcd.Get_Display_Height()-13, 17, mylcd.Get_Display_Height()-13);
+    mylcd.Fill_Rectangle(4, mylcd.Get_Display_Height()-14, 7, mylcd.Get_Display_Height()-14);
+    mylcd.Fill_Rectangle(13, mylcd.Get_Display_Height()-14, 16, mylcd.Get_Display_Height()-14);
     
     mylcd.Set_Draw_color(WHITE);
     
     //heart2
     mylcd.Set_Draw_color(BLACK);
-    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Width()-2);//1st layer
-    mylcd.Draw_Pixel(9+18, mylcd.Get_Display_Width()-3);//2nd layer
-    mylcd.Draw_Pixel(11+18, mylcd.Get_Display_Width()-3);
-    mylcd.Draw_Pixel(8+18, mylcd.Get_Display_Width()-4);//3rd layer
-    mylcd.Draw_Pixel(12+18, mylcd.Get_Display_Width()-4);
-    mylcd.Draw_Pixel(7+18, mylcd.Get_Display_Width()-5);//4th layer
-    mylcd.Draw_Pixel(13+18, mylcd.Get_Display_Width()-5);
-    mylcd.Draw_Pixel(6+18, mylcd.Get_Display_Width()-6);//5th layer
-    mylcd.Draw_Pixel(14+18, mylcd.Get_Display_Width()-6);
-    mylcd.Draw_Pixel(5+18, mylcd.Get_Display_Width()-7);//6th layer
-    mylcd.Draw_Pixel(15+18, mylcd.Get_Display_Width()-7);
-    mylcd.Draw_Pixel(4+18, mylcd.Get_Display_Width()-8);//7th layer
-    mylcd.Draw_Pixel(16+18, mylcd.Get_Display_Width()-8);
-    mylcd.Draw_Pixel(3+18, mylcd.Get_Display_Width()-9);//8th layer
-    mylcd.Draw_Pixel(17+18, mylcd.Get_Display_Width()-9);
-    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Width()-10);//9th layer
-    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Width()-10);
-    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Width()-11);//10th layer
-    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Width()-11);
-    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Width()-12);//11th layer
-    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Width()-12);
-    mylcd.Draw_Pixel(10+18, mylcd.Get_Display_Width()-12);
-    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Width()-13);//12th layer
-    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(11+18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(9+18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(17+18, mylcd.Get_Display_Width()-14);//13th layer
-    mylcd.Draw_Pixel(3+18, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(8+18, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(12+18, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(4+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(5+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(6+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(7+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(13+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(14+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(15+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(16+18, mylcd.Get_Display_Width()-15);
+    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Height()-2);//1st layer
+    mylcd.Draw_Pixel(9+18, mylcd.Get_Display_Height()-3);//2nd layer
+    mylcd.Draw_Pixel(11+18, mylcd.Get_Display_Height()-3);
+    mylcd.Draw_Pixel(8+18, mylcd.Get_Display_Height()-4);//3rd layer
+    mylcd.Draw_Pixel(12+18, mylcd.Get_Display_Height()-4);
+    mylcd.Draw_Pixel(7+18, mylcd.Get_Display_Height()-5);//4th layer
+    mylcd.Draw_Pixel(13+18, mylcd.Get_Display_Height()-5);
+    mylcd.Draw_Pixel(6+18, mylcd.Get_Display_Height()-6);//5th layer
+    mylcd.Draw_Pixel(14+18, mylcd.Get_Display_Height()-6);
+    mylcd.Draw_Pixel(5+18, mylcd.Get_Display_Height()-7);//6th layer
+    mylcd.Draw_Pixel(15+18, mylcd.Get_Display_Height()-7);
+    mylcd.Draw_Pixel(4+18, mylcd.Get_Display_Height()-8);//7th layer
+    mylcd.Draw_Pixel(16+18, mylcd.Get_Display_Height()-8);
+    mylcd.Draw_Pixel(3+18, mylcd.Get_Display_Height()-9);//8th layer
+    mylcd.Draw_Pixel(17+18, mylcd.Get_Display_Height()-9);
+    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Height()-10);//9th layer
+    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Height()-10);
+    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Height()-11);//10th layer
+    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Height()-11);
+    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Height()-12);//11th layer
+    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Height()-12);
+    mylcd.Draw_Pixel(10+18, mylcd.Get_Display_Height()-12);
+    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Height()-13);//12th layer
+    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(11+18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(9+18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(17+18, mylcd.Get_Display_Height()-14);//13th layer
+    mylcd.Draw_Pixel(3+18, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(8+18, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(12+18, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(4+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(5+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(6+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(7+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(13+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(14+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(15+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(16+18, mylcd.Get_Display_Height()-15);
+    
     mylcd.Set_Draw_color(RED);
+    mylcd.Draw_Pixel(10+18, mylcd.Get_Display_Height()-3);
+    mylcd.Fill_Rectangle(9+18, mylcd.Get_Display_Height()-4,`11+18, mylcd.Get_Display_Height()-4);
+    mylcd.Fill_Rectangle(8+18, mylcd.Get_Display_Height()-5, 12+18, mylcd.Get_Display_Height()-5);
+    mylcd.Fill_Rectangle(7+18, mylcd.Get_Display_Height()-6, 13+18, mylcd.Get_Display_Height()-6);
+    mylcd.Fill_Rectangle(6+18, mylcd.Get_Display_Height()-7, 14+18, mylcd.Get_Display_Height()-7);
+    mylcd.Fill_Rectangle(5+18, mylcd.Get_Display_Height()-8, 15+18, mylcd.Get_Display_Height()-8);
+    mylcd.Fill_Rectangle(4+18, mylcd.Get_Display_Height()-9, 16+18, mylcd.Get_Display_Height()-9);
+    mylcd.Fill_Rectangle(3+18, mylcd.Get_Display_Height()-10, 17+18, mylcd.Get_Display_Height()-10);
+    mylcd.Fill_Rectangle(3+18, mylcd.Get_Display_Height()-11, 17+18, mylcd.Get_Display_Height()-11);
+    mylcd.Fill_Rectangle(3+18, mylcd.Get_Display_Height()-12, 9+18, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(11+18, mylcd.Get_Display_Height()-12, 17+18, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(3+18, mylcd.Get_Display_Height()-13, 8+18, mylcd.Get_Display_Height()-13);
+    mylcd.Fill_Rectangle(12+18, mylcd.Get_Display_Height()-13, 17+18, mylcd.Get_Display_Height()-13);
+    mylcd.Fill_Rectangle(4+18, mylcd.Get_Display_Height()-14, 7+18, mylcd.Get_Display_Height()-14);
+    mylcd.Fill_Rectangle(13+18, mylcd.Get_Display_Height()-14, 16+18, mylcd.Get_Display_Height()-14);
     
     mylcd.Set_Draw_color(WHITE);
     
     //heart3
     mylcd.Set_Draw_color(BLACK);
-    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Width()-2);//1st layer
-    mylcd.Draw_Pixel(9+18+18, mylcd.Get_Display_Width()-3);//2nd layer
-    mylcd.Draw_Pixel(11+18+18, mylcd.Get_Display_Width()-3);
-    mylcd.Draw_Pixel(8+18+18, mylcd.Get_Display_Width()-4);//3rd layer
-    mylcd.Draw_Pixel(12+18+18, mylcd.Get_Display_Width()-4);
-    mylcd.Draw_Pixel(7+18+18, mylcd.Get_Display_Width()-5);//4th layer
-    mylcd.Draw_Pixel(13+18+18, mylcd.Get_Display_Width()-5);
-    mylcd.Draw_Pixel(6+18+18, mylcd.Get_Display_Width()-6);//5th layer
-    mylcd.Draw_Pixel(14+18+18, mylcd.Get_Display_Width()-6);
-    mylcd.Draw_Pixel(5+18+18, mylcd.Get_Display_Width()-7);//6th layer
-    mylcd.Draw_Pixel(15+18+18, mylcd.Get_Display_Width()-7);
-    mylcd.Draw_Pixel(4+18+18, mylcd.Get_Display_Width()-8);//7th layer
-    mylcd.Draw_Pixel(16+18+18, mylcd.Get_Display_Width()-8);
-    mylcd.Draw_Pixel(3+18+18, mylcd.Get_Display_Width()-9);//8th layer
-    mylcd.Draw_Pixel(17+18+18, mylcd.Get_Display_Width()-9);
-    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Width()-10);//9th layer
-    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Width()-10);
-    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Width()-11);//10th layer
-    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Width()-11);
-    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Width()-12);//11th layer
-    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Width()-12);
-    mylcd.Draw_Pixel(10+18+18, mylcd.Get_Display_Width()-12);
-    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Width()-13);//12th layer
-    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(11+18+18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(9+18+18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(17+18+18, mylcd.Get_Display_Width()-14);//13th layer
-    mylcd.Draw_Pixel(3+18+18, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(8+18+18, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(12+18+18, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(4+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(5+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(6+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(7+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(13+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(14+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(15+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(16+18+18, mylcd.Get_Display_Width()-15);
+    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Height()-2);//1st layer
+    mylcd.Draw_Pixel(9+18+18, mylcd.Get_Display_Height()-3);//2nd layer
+    mylcd.Draw_Pixel(11+18+18, mylcd.Get_Display_Height()-3);
+    mylcd.Draw_Pixel(8+18+18, mylcd.Get_Display_Height()-4);//3rd layer
+    mylcd.Draw_Pixel(12+18+18, mylcd.Get_Display_Height()-4);
+    mylcd.Draw_Pixel(7+18+18, mylcd.Get_Display_Height()-5);//4th layer
+    mylcd.Draw_Pixel(13+18+18, mylcd.Get_Display_Height()-5);
+    mylcd.Draw_Pixel(6+18+18, mylcd.Get_Display_Height()-6);//5th layer
+    mylcd.Draw_Pixel(14+18+18, mylcd.Get_Display_Height()-6);
+    mylcd.Draw_Pixel(5+18+18, mylcd.Get_Display_Height()-7);//6th layer
+    mylcd.Draw_Pixel(15+18+18, mylcd.Get_Display_Height()-7);
+    mylcd.Draw_Pixel(4+18+18, mylcd.Get_Display_Height()-8);//7th layer
+    mylcd.Draw_Pixel(16+18+18, mylcd.Get_Display_Height()-8);
+    mylcd.Draw_Pixel(3+18+18, mylcd.Get_Display_Height()-9);//8th layer
+    mylcd.Draw_Pixel(17+18+18, mylcd.Get_Display_Height()-9);
+    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Height()-10);//9th layer
+    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Height()-10);
+    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Height()-11);//10th layer
+    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Height()-11);
+    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Height()-12);//11th layer
+    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Height()-12);
+    mylcd.Draw_Pixel(10+18+18, mylcd.Get_Display_Height()-12);
+    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Height()-13);//12th layer
+    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(11+18+18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(9+18+18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(17+18+18, mylcd.Get_Display_Height()-14);//13th layer
+    mylcd.Draw_Pixel(3+18+18, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(8+18+18, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(12+18+18, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(4+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(5+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(6+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(7+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(13+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(14+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(15+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(16+18+18, mylcd.Get_Display_Height()-15);
+    
     mylcd.Set_Draw_color(RED);
+    mylcd.Draw_Pixel(10+18+18, mylcd.Get_Display_Height()-3);
+    mylcd.Fill_Rectangle(9+18+18, mylcd.Get_Display_Height()-4,`11+18+18, mylcd.Get_Display_Height()-4);
+    mylcd.Fill_Rectangle(8+18+18, mylcd.Get_Display_Height()-5, 12+18+18, mylcd.Get_Display_Height()-5);
+    mylcd.Fill_Rectangle(7+18+18, mylcd.Get_Display_Height()-6, 13+18+18, mylcd.Get_Display_Height()-6);
+    mylcd.Fill_Rectangle(6+18+18, mylcd.Get_Display_Height()-7, 14+18+18, mylcd.Get_Display_Height()-7);
+    mylcd.Fill_Rectangle(5+18+18, mylcd.Get_Display_Height()-8, 15+18+18, mylcd.Get_Display_Height()-8);
+    mylcd.Fill_Rectangle(4+18+18, mylcd.Get_Display_Height()-9, 16+18+18, mylcd.Get_Display_Height()-9);
+    mylcd.Fill_Rectangle(3+18+18, mylcd.Get_Display_Height()-10, 17+18+18, mylcd.Get_Display_Height()-10);
+    mylcd.Fill_Rectangle(3+18+18, mylcd.Get_Display_Height()-11, 17+18+18, mylcd.Get_Display_Height()-11);
+    mylcd.Fill_Rectangle(3+18+18, mylcd.Get_Display_Height()-12, 9+18+18, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(11+18+18, mylcd.Get_Display_Height()-12, 17+18+18, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(3+18+18, mylcd.Get_Display_Height()-13, 8+18+18, mylcd.Get_Display_Height()-13);
+    mylcd.Fill_Rectangle(12+18+18, mylcd.Get_Display_Height()-13, 17+18+18, mylcd.Get_Display_Height()-13);
+    mylcd.Fill_Rectangle(4+18+18, mylcd.Get_Display_Height()-14, 7+18+18, mylcd.Get_Display_Height()-14);
+    mylcd.Fill_Rectangle(13+18+18, mylcd.Get_Display_Height()-14, 16+18+18, mylcd.Get_Display_Height()-14);
     
     mylcd.Set_Draw_color(WHITE);
     
   }
-  else if (lives = 1) {
+  else if (lives == 1) {
     //heart1
     mylcd.Set_Draw_color(BLACK);
-    mylcd.Draw_Pixel(10, mylcd.Get_Display_Width()-2);//1st layer
-    mylcd.Draw_Pixel(9, mylcd.Get_Display_Width()-3);//2nd layer
-    mylcd.Draw_Pixel(11, mylcd.Get_Display_Width()-3);
-    mylcd.Draw_Pixel(8, mylcd.Get_Display_Width()-4);//3rd layer
-    mylcd.Draw_Pixel(12, mylcd.Get_Display_Width()-4);
-    mylcd.Draw_Pixel(7, mylcd.Get_Display_Width()-5);//4th layer
-    mylcd.Draw_Pixel(13, mylcd.Get_Display_Width()-5);
-    mylcd.Draw_Pixel(6, mylcd.Get_Display_Width()-6);//5th layer
-    mylcd.Draw_Pixel(14, mylcd.Get_Display_Width()-6);
-    mylcd.Draw_Pixel(5, mylcd.Get_Display_Width()-7);//6th layer
-    mylcd.Draw_Pixel(15, mylcd.Get_Display_Width()-7);
-    mylcd.Draw_Pixel(4, mylcd.Get_Display_Width()-8);//7th layer
-    mylcd.Draw_Pixel(16, mylcd.Get_Display_Width()-8);
-    mylcd.Draw_Pixel(3, mylcd.Get_Display_Width()-9);//8th layer
-    mylcd.Draw_Pixel(17, mylcd.Get_Display_Width()-9);
-    mylcd.Draw_Pixel(2, mylcd.Get_Display_Width()-10);//9th layer
-    mylcd.Draw_Pixel(18, mylcd.Get_Display_Width()-10);
-    mylcd.Draw_Pixel(2, mylcd.Get_Display_Width()-11);//10th layer
-    mylcd.Draw_Pixel(18, mylcd.Get_Display_Width()-11);
-    mylcd.Draw_Pixel(2, mylcd.Get_Display_Width()-12);//11th layer
-    mylcd.Draw_Pixel(18, mylcd.Get_Display_Width()-12);
-    mylcd.Draw_Pixel(10, mylcd.Get_Display_Width()-12);
-    mylcd.Draw_Pixel(2, mylcd.Get_Display_Width()-13);//12th layer
-    mylcd.Draw_Pixel(18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(11, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(9, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(17, mylcd.Get_Display_Width()-14);//13th layer
-    mylcd.Draw_Pixel(3, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(8, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(12, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(4, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(5, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(6, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(7, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(13, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(14, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(15, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(16, mylcd.Get_Display_Width()-15);
+    mylcd.Draw_Pixel(10, mylcd.Get_Display_Height()-2);//1st layer
+    mylcd.Draw_Pixel(9, mylcd.Get_Display_Height()-3);//2nd layer
+    mylcd.Draw_Pixel(11, mylcd.Get_Display_Height()-3);
+    mylcd.Draw_Pixel(8, mylcd.Get_Display_Height()-4);//3rd layer
+    mylcd.Draw_Pixel(12, mylcd.Get_Display_Height()-4);
+    mylcd.Draw_Pixel(7, mylcd.Get_Display_Height()-5);//4th layer
+    mylcd.Draw_Pixel(13, mylcd.Get_Display_Height()-5);
+    mylcd.Draw_Pixel(6, mylcd.Get_Display_Height()-6);//5th layer
+    mylcd.Draw_Pixel(14, mylcd.Get_Display_Height()-6);
+    mylcd.Draw_Pixel(5, mylcd.Get_Display_Height()-7);//6th layer
+    mylcd.Draw_Pixel(15, mylcd.Get_Display_Height()-7);
+    mylcd.Draw_Pixel(4, mylcd.Get_Display_Height()-8);//7th layer
+    mylcd.Draw_Pixel(16, mylcd.Get_Display_Height()-8);
+    mylcd.Draw_Pixel(3, mylcd.Get_Display_Height()-9);//8th layer
+    mylcd.Draw_Pixel(17, mylcd.Get_Display_Height()-9);
+    mylcd.Draw_Pixel(2, mylcd.Get_Display_Height()-10);//9th layer
+    mylcd.Draw_Pixel(18, mylcd.Get_Display_Height()-10);
+    mylcd.Draw_Pixel(2, mylcd.Get_Display_Height()-11);//10th layer
+    mylcd.Draw_Pixel(18, mylcd.Get_Display_Height()-11);
+    mylcd.Draw_Pixel(2, mylcd.Get_Display_Height()-12);//11th layer
+    mylcd.Draw_Pixel(18, mylcd.Get_Display_Height()-12);
+    mylcd.Draw_Pixel(10, mylcd.Get_Display_Height()-12);
+    mylcd.Draw_Pixel(2, mylcd.Get_Display_Height()-13);//12th layer
+    mylcd.Draw_Pixel(18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(11, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(9, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(17, mylcd.Get_Display_Height()-14);//13th layer
+    mylcd.Draw_Pixel(3, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(8, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(12, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(4, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(5, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(6, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(7, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(13, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(14, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(15, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(16, mylcd.Get_Display_Height()-15);
+    
     mylcd.Set_Draw_color(RED);
+    mylcd.Draw_Pixel(10, mylcd.Get_Display_Height()-3);
+    mylcd.Fill_Rectangle(9, mylcd.Get_Display_Height()-4,`11, mylcd.Get_Display_Height()-4);
+    mylcd.Fill_Rectangle(8, mylcd.Get_Display_Height()-5, 12, mylcd.Get_Display_Height()-5);
+    mylcd.Fill_Rectangle(7, mylcd.Get_Display_Height()-6, 13, mylcd.Get_Display_Height()-6);
+    mylcd.Fill_Rectangle(6, mylcd.Get_Display_Height()-7, 14, mylcd.Get_Display_Height()-7);
+    mylcd.Fill_Rectangle(5, mylcd.Get_Display_Height()-8, 15, mylcd.Get_Display_Height()-8);
+    mylcd.Fill_Rectangle(4, mylcd.Get_Display_Height()-9, 16, mylcd.Get_Display_Height()-9);
+    mylcd.Fill_Rectangle(3, mylcd.Get_Display_Height()-10, 17, mylcd.Get_Display_Height()-10);
+    mylcd.Fill_Rectangle(3, mylcd.Get_Display_Height()-11, 17, mylcd.Get_Display_Height()-11);
+    mylcd.Fill_Rectangle(3, mylcd.Get_Display_Height()-12, 9, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(11, mylcd.Get_Display_Height()-12, 17, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(3, mylcd.Get_Display_Height()-13, 8, mylcd.Get_Display_Height()-13);
+    mylcd.Fill_Rectangle(12, mylcd.Get_Display_Height()-13, 17, mylcd.Get_Display_Height()-13);
+    mylcd.Fill_Rectangle(4, mylcd.Get_Display_Height()-14, 7, mylcd.Get_Display_Height()-14);
+    mylcd.Fill_Rectangle(13, mylcd.Get_Display_Height()-14, 16, mylcd.Get_Display_Height()-14);
     
     mylcd.Set_Draw_color(WHITE);
     
     //heart2
     mylcd.Set_Draw_color(BLACK);
-    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Width()-2);//1st layer
-    mylcd.Draw_Pixel(9+18, mylcd.Get_Display_Width()-3);//2nd layer
-    mylcd.Draw_Pixel(11+18, mylcd.Get_Display_Width()-3);
-    mylcd.Draw_Pixel(8+18, mylcd.Get_Display_Width()-4);//3rd layer
-    mylcd.Draw_Pixel(12+18, mylcd.Get_Display_Width()-4);
-    mylcd.Draw_Pixel(7+18, mylcd.Get_Display_Width()-5);//4th layer
-    mylcd.Draw_Pixel(13+18, mylcd.Get_Display_Width()-5);
-    mylcd.Draw_Pixel(6+18, mylcd.Get_Display_Width()-6);//5th layer
-    mylcd.Draw_Pixel(14+18, mylcd.Get_Display_Width()-6);
-    mylcd.Draw_Pixel(5+18, mylcd.Get_Display_Width()-7);//6th layer
-    mylcd.Draw_Pixel(15+18, mylcd.Get_Display_Width()-7);
-    mylcd.Draw_Pixel(4+18, mylcd.Get_Display_Width()-8);//7th layer
-    mylcd.Draw_Pixel(16+18, mylcd.Get_Display_Width()-8);
-    mylcd.Draw_Pixel(3+18, mylcd.Get_Display_Width()-9);//8th layer
-    mylcd.Draw_Pixel(17+18, mylcd.Get_Display_Width()-9);
-    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Width()-10);//9th layer
-    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Width()-10);
-    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Width()-11);//10th layer
-    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Width()-11);
-    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Width()-12);//11th layer
-    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Width()-12);
-    mylcd.Draw_Pixel(10+18, mylcd.Get_Display_Width()-12);
-    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Width()-13);//12th layer
-    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(11+18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(9+18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(17+18, mylcd.Get_Display_Width()-14);//13th layer
-    mylcd.Draw_Pixel(3+18, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(8+18, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(12+18, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(4+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(5+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(6+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(7+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(13+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(14+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(15+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(16+18, mylcd.Get_Display_Width()-15);
+    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Height()-2);//1st layer
+    mylcd.Draw_Pixel(9+18, mylcd.Get_Display_Height()-3);//2nd layer
+    mylcd.Draw_Pixel(11+18, mylcd.Get_Display_Height()-3);
+    mylcd.Draw_Pixel(8+18, mylcd.Get_Display_Height()-4);//3rd layer
+    mylcd.Draw_Pixel(12+18, mylcd.Get_Display_Height()-4);
+    mylcd.Draw_Pixel(7+18, mylcd.Get_Display_Height()-5);//4th layer
+    mylcd.Draw_Pixel(13+18, mylcd.Get_Display_Height()-5);
+    mylcd.Draw_Pixel(6+18, mylcd.Get_Display_Height()-6);//5th layer
+    mylcd.Draw_Pixel(14+18, mylcd.Get_Display_Height()-6);
+    mylcd.Draw_Pixel(5+18, mylcd.Get_Display_Height()-7);//6th layer
+    mylcd.Draw_Pixel(15+18, mylcd.Get_Display_Height()-7);
+    mylcd.Draw_Pixel(4+18, mylcd.Get_Display_Height()-8);//7th layer
+    mylcd.Draw_Pixel(16+18, mylcd.Get_Display_Height()-8);
+    mylcd.Draw_Pixel(3+18, mylcd.Get_Display_Height()-9);//8th layer
+    mylcd.Draw_Pixel(17+18, mylcd.Get_Display_Height()-9);
+    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Height()-10);//9th layer
+    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Height()-10);
+    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Height()-11);//10th layer
+    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Height()-11);
+    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Height()-12);//11th layer
+    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Height()-12);
+    mylcd.Draw_Pixel(10+18, mylcd.Get_Display_Height()-12);
+    mylcd.Draw_Pixel(2+18, mylcd.Get_Display_Height()-13);//12th layer
+    mylcd.Draw_Pixel(18+18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(11+18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(9+18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(17+18, mylcd.Get_Display_Height()-14);//13th layer
+    mylcd.Draw_Pixel(3+18, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(8+18, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(12+18, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(4+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(5+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(6+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(7+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(13+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(14+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(15+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(16+18, mylcd.Get_Display_Height()-15);
+    
     mylcd.Set_Draw_color(LIGHT_GREY);
+    mylcd.Draw_Pixel(10+18, mylcd.Get_Display_Height()-3);
+    mylcd.Fill_Rectangle(9+18, mylcd.Get_Display_Height()-4,`11+18, mylcd.Get_Display_Height()-4);
+    mylcd.Fill_Rectangle(8+18, mylcd.Get_Display_Height()-5, 12+18, mylcd.Get_Display_Height()-5);
+    mylcd.Fill_Rectangle(7+18, mylcd.Get_Display_Height()-6, 13+18, mylcd.Get_Display_Height()-6);
+    mylcd.Fill_Rectangle(6+18, mylcd.Get_Display_Height()-7, 14+18, mylcd.Get_Display_Height()-7);
+    mylcd.Fill_Rectangle(5+18, mylcd.Get_Display_Height()-8, 15+18, mylcd.Get_Display_Height()-8);
+    mylcd.Fill_Rectangle(4+18, mylcd.Get_Display_Height()-9, 16+18, mylcd.Get_Display_Height()-9);
+    mylcd.Fill_Rectangle(3+18, mylcd.Get_Display_Height()-10, 17+18, mylcd.Get_Display_Height()-10);
+    mylcd.Fill_Rectangle(3+18, mylcd.Get_Display_Height()-11, 17+18, mylcd.Get_Display_Height()-11);
+    mylcd.Fill_Rectangle(3+18, mylcd.Get_Display_Height()-12, 9+18, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(11+18, mylcd.Get_Display_Height()-12, 17+18, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(3+18, mylcd.Get_Display_Height()-13, 8+18, mylcd.Get_Display_Height()-13);
+    mylcd.Fill_Rectangle(12+18, mylcd.Get_Display_Height()-13, 17+18, mylcd.Get_Display_Height()-13);
+    mylcd.Fill_Rectangle(4+18, mylcd.Get_Display_Height()-14, 7+18, mylcd.Get_Display_Height()-14);
+    mylcd.Fill_Rectangle(13+18, mylcd.Get_Display_Height()-14, 16+18, mylcd.Get_Display_Height()-14);
     
     mylcd.Set_Draw_color(WHITE);
     
     //heart3
     mylcd.Set_Draw_color(BLACK);
-    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Width()-2);//1st layer
-    mylcd.Draw_Pixel(9+18+18, mylcd.Get_Display_Width()-3);//2nd layer
-    mylcd.Draw_Pixel(11+18+18, mylcd.Get_Display_Width()-3);
-    mylcd.Draw_Pixel(8+18+18, mylcd.Get_Display_Width()-4);//3rd layer
-    mylcd.Draw_Pixel(12+18+18, mylcd.Get_Display_Width()-4);
-    mylcd.Draw_Pixel(7+18+18, mylcd.Get_Display_Width()-5);//4th layer
-    mylcd.Draw_Pixel(13+18+18, mylcd.Get_Display_Width()-5);
-    mylcd.Draw_Pixel(6+18+18, mylcd.Get_Display_Width()-6);//5th layer
-    mylcd.Draw_Pixel(14+18+18, mylcd.Get_Display_Width()-6);
-    mylcd.Draw_Pixel(5+18+18, mylcd.Get_Display_Width()-7);//6th layer
-    mylcd.Draw_Pixel(15+18+18, mylcd.Get_Display_Width()-7);
-    mylcd.Draw_Pixel(4+18+18, mylcd.Get_Display_Width()-8);//7th layer
-    mylcd.Draw_Pixel(16+18+18, mylcd.Get_Display_Width()-8);
-    mylcd.Draw_Pixel(3+18+18, mylcd.Get_Display_Width()-9);//8th layer
-    mylcd.Draw_Pixel(17+18+18, mylcd.Get_Display_Width()-9);
-    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Width()-10);//9th layer
-    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Width()-10);
-    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Width()-11);//10th layer
-    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Width()-11);
-    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Width()-12);//11th layer
-    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Width()-12);
-    mylcd.Draw_Pixel(10+18+18, mylcd.Get_Display_Width()-12);
-    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Width()-13);//12th layer
-    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(11+18+18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(9+18+18, mylcd.Get_Display_Width()-13);
-    mylcd.Draw_Pixel(17+18+18, mylcd.Get_Display_Width()-14);//13th layer
-    mylcd.Draw_Pixel(3+18+18, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(8+18+18, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(12+18+18, mylcd.Get_Display_Width()-14);
-    mylcd.Draw_Pixel(4+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(5+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(6+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(7+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(13+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(14+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(15+18+18, mylcd.Get_Display_Width()-15);
-    mylcd.Draw_Pixel(16+18+18, mylcd.Get_Display_Width()-15);
+    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Height()-2);//1st layer
+    mylcd.Draw_Pixel(9+18+18, mylcd.Get_Display_Height()-3);//2nd layer
+    mylcd.Draw_Pixel(11+18+18, mylcd.Get_Display_Height()-3);
+    mylcd.Draw_Pixel(8+18+18, mylcd.Get_Display_Height()-4);//3rd layer
+    mylcd.Draw_Pixel(12+18+18, mylcd.Get_Display_Height()-4);
+    mylcd.Draw_Pixel(7+18+18, mylcd.Get_Display_Height()-5);//4th layer
+    mylcd.Draw_Pixel(13+18+18, mylcd.Get_Display_Height()-5);
+    mylcd.Draw_Pixel(6+18+18, mylcd.Get_Display_Height()-6);//5th layer
+    mylcd.Draw_Pixel(14+18+18, mylcd.Get_Display_Height()-6);
+    mylcd.Draw_Pixel(5+18+18, mylcd.Get_Display_Height()-7);//6th layer
+    mylcd.Draw_Pixel(15+18+18, mylcd.Get_Display_Height()-7);
+    mylcd.Draw_Pixel(4+18+18, mylcd.Get_Display_Height()-8);//7th layer
+    mylcd.Draw_Pixel(16+18+18, mylcd.Get_Display_Height()-8);
+    mylcd.Draw_Pixel(3+18+18, mylcd.Get_Display_Height()-9);//8th layer
+    mylcd.Draw_Pixel(17+18+18, mylcd.Get_Display_Height()-9);
+    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Height()-10);//9th layer
+    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Height()-10);
+    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Height()-11);//10th layer
+    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Height()-11);
+    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Height()-12);//11th layer
+    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Height()-12);
+    mylcd.Draw_Pixel(10+18+18, mylcd.Get_Display_Height()-12);
+    mylcd.Draw_Pixel(2+18+18, mylcd.Get_Display_Height()-13);//12th layer
+    mylcd.Draw_Pixel(18+18+18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(11+18+18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(9+18+18, mylcd.Get_Display_Height()-13);
+    mylcd.Draw_Pixel(17+18+18, mylcd.Get_Display_Height()-14);//13th layer
+    mylcd.Draw_Pixel(3+18+18, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(8+18+18, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(12+18+18, mylcd.Get_Display_Height()-14);
+    mylcd.Draw_Pixel(4+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(5+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(6+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(7+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(13+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(14+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(15+18+18, mylcd.Get_Display_Height()-15);
+    mylcd.Draw_Pixel(16+18+18, mylcd.Get_Display_Height()-15);
+    
     mylcd.Set_Draw_color(LIGHT_GREY);
+    mylcd.Draw_Pixel(10+18+18, mylcd.Get_Display_Height()-3);
+    mylcd.Fill_Rectangle(9+18+18, mylcd.Get_Display_Height()-4,`11+18+18, mylcd.Get_Display_Height()-4);
+    mylcd.Fill_Rectangle(8+18+18, mylcd.Get_Display_Height()-5, 12+18+18, mylcd.Get_Display_Height()-5);
+    mylcd.Fill_Rectangle(7+18+18, mylcd.Get_Display_Height()-6, 13+18+18, mylcd.Get_Display_Height()-6);
+    mylcd.Fill_Rectangle(6+18+18, mylcd.Get_Display_Height()-7, 14+18+18, mylcd.Get_Display_Height()-7);
+    mylcd.Fill_Rectangle(5+18+18, mylcd.Get_Display_Height()-8, 15+18+18, mylcd.Get_Display_Height()-8);
+    mylcd.Fill_Rectangle(4+18+18, mylcd.Get_Display_Height()-9, 16+18+18, mylcd.Get_Display_Height()-9);
+    mylcd.Fill_Rectangle(3+18+18, mylcd.Get_Display_Height()-10, 17+18+18, mylcd.Get_Display_Height()-10);
+    mylcd.Fill_Rectangle(3+18+18, mylcd.Get_Display_Height()-11, 17+18+18, mylcd.Get_Display_Height()-11);
+    mylcd.Fill_Rectangle(3+18+18, mylcd.Get_Display_Height()-12, 9+18+18, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(11+18+18, mylcd.Get_Display_Height()-12, 17+18+18, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(3+18+18, mylcd.Get_Display_Height()-13, 8+18+18, mylcd.Get_Display_Height()-13);
+    mylcd.Fill_Rectangle(12+18+18, mylcd.Get_Display_Height()-13, 17+18+18, mylcd.Get_Display_Height()-13);
+    mylcd.Fill_Rectangle(4+18+18, mylcd.Get_Display_Height()-14, 7+18+18, mylcd.Get_Display_Height()-14);
+    mylcd.Fill_Rectangle(13+18+18, mylcd.Get_Display_Height()-14, 16+18+18, mylcd.Get_Display_Height()-14);
     
     mylcd.Set_Draw_color(WHITE);
     
@@ -557,7 +701,7 @@ void setup() {
       }
       else {
         if ((rock_x+20) > (mylcd.Get_Display_Width() - spr1length)) {
-          --lives
+          --lives;
         }
       }
     }
@@ -604,7 +748,7 @@ void setup() {
       }
       else {
         if ((rock_x+20) > (mylcd.Get_Display_Width() - spr1length)) {
-          --lives
+          --lives;
         }
       }
     }
@@ -616,12 +760,12 @@ void setup() {
       }
       else {
         if ((rock_x+20) > (mylcd.Get_Display_Width() - spr2length)) {
-          --lives
+          --lives;
         }
       }
     }
     if (lives == 0) {
-      lives == 3;
+      lives = 3;
       //TERMINATE
       //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
       //TERMINATE
@@ -689,7 +833,7 @@ void loop() {
       }
       else {
         if ((rock_x+20) > (mylcd.Get_Display_Width() - spr1length)) {
-          --lives
+          --lives;
         }
       }
     }
@@ -701,7 +845,7 @@ void loop() {
       }
       else {
         if ((rock_x+20) > (mylcd.Get_Display_Width() - spr2length)) {
-          --lives
+          --lives;
         }
       }
     }
@@ -746,7 +890,7 @@ void loop() {
       }
       else {
         if ((rock_x+20) > (mylcd.Get_Display_Width() - spr1length)) {
-          --lives
+          --lives;
         }
       }
     }
@@ -758,7 +902,7 @@ void loop() {
       }
       else {
         if ((rock_x+20) > (mylcd.Get_Display_Width() - spr2length)) {
-          --lives
+          --lives;
         }
       }
     }
@@ -824,7 +968,7 @@ void loop() {
       }
       else {
         if ((rock_x+20) > (mylcd.Get_Display_Width() - spr1length)) {
-          --lives
+          --lives;
         }
       }
     }
@@ -836,7 +980,7 @@ void loop() {
       }
       else {
         if ((rock_x+20) > (mylcd.Get_Display_Width() - spr2length)) {
-          --lives
+          --lives;
         }
       }
     }
@@ -881,7 +1025,7 @@ void loop() {
       }
       else {
         if ((rock_x+20) > (mylcd.Get_Display_Width() - spr1length)) {
-          --lives
+          --lives;
         }
       }
     }
@@ -893,7 +1037,7 @@ void loop() {
       }
       else {
         if ((rock_x+20) > (mylcd.Get_Display_Width() - spr2length)) {
-          --lives
+          --lives;
         }
       }
     }
