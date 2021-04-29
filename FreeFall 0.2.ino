@@ -112,7 +112,7 @@ void load_lives(int lives) {
     
     mylcd.Set_Draw_color(RED);
     mylcd.Draw_Pixel(10, mylcd.Get_Display_Height()-3);
-    mylcd.Fill_Rectangle(9, mylcd.Get_Display_Height()-4,`11, mylcd.Get_Display_Height()-4);
+    mylcd.Fill_Rectangle(9, mylcd.Get_Display_Height()-4, 11, mylcd.Get_Display_Height()-4);
     mylcd.Fill_Rectangle(8, mylcd.Get_Display_Height()-5, 12, mylcd.Get_Display_Height()-5);
     mylcd.Fill_Rectangle(7, mylcd.Get_Display_Height()-6, 13, mylcd.Get_Display_Height()-6);
     mylcd.Fill_Rectangle(6, mylcd.Get_Display_Height()-7, 14, mylcd.Get_Display_Height()-7);
@@ -172,7 +172,7 @@ void load_lives(int lives) {
     
     mylcd.Set_Draw_color(RED);
     mylcd.Draw_Pixel(10+18, mylcd.Get_Display_Height()-3);
-    mylcd.Fill_Rectangle(9+18, mylcd.Get_Display_Height()-4,`11+18, mylcd.Get_Display_Height()-4);
+    mylcd.Fill_Rectangle(9+18, mylcd.Get_Display_Height()-4, 11+18, mylcd.Get_Display_Height()-4);
     mylcd.Fill_Rectangle(8+18, mylcd.Get_Display_Height()-5, 12+18, mylcd.Get_Display_Height()-5);
     mylcd.Fill_Rectangle(7+18, mylcd.Get_Display_Height()-6, 13+18, mylcd.Get_Display_Height()-6);
     mylcd.Fill_Rectangle(6+18, mylcd.Get_Display_Height()-7, 14+18, mylcd.Get_Display_Height()-7);
@@ -232,7 +232,7 @@ void load_lives(int lives) {
     
     mylcd.Set_Draw_color(RED);
     mylcd.Draw_Pixel(10+18+18, mylcd.Get_Display_Height()-3);
-    mylcd.Fill_Rectangle(9+18+18, mylcd.Get_Display_Height()-4,`11+18+18, mylcd.Get_Display_Height()-4);
+    mylcd.Fill_Rectangle(9+18+18, mylcd.Get_Display_Height()-4, 11+18+18, mylcd.Get_Display_Height()-4);
     mylcd.Fill_Rectangle(8+18+18, mylcd.Get_Display_Height()-5, 12+18+18, mylcd.Get_Display_Height()-5);
     mylcd.Fill_Rectangle(7+18+18, mylcd.Get_Display_Height()-6, 13+18+18, mylcd.Get_Display_Height()-6);
     mylcd.Fill_Rectangle(6+18+18, mylcd.Get_Display_Height()-7, 14+18+18, mylcd.Get_Display_Height()-7);
@@ -294,7 +294,7 @@ void load_lives(int lives) {
     
     mylcd.Set_Draw_color(RED);
     mylcd.Draw_Pixel(10, mylcd.Get_Display_Height()-3);
-    mylcd.Fill_Rectangle(9, mylcd.Get_Display_Height()-4,`11, mylcd.Get_Display_Height()-4);
+    mylcd.Fill_Rectangle(9, mylcd.Get_Display_Height()-4, 11, mylcd.Get_Display_Height()-4);
     mylcd.Fill_Rectangle(8, mylcd.Get_Display_Height()-5, 12, mylcd.Get_Display_Height()-5);
     mylcd.Fill_Rectangle(7, mylcd.Get_Display_Height()-6, 13, mylcd.Get_Display_Height()-6);
     mylcd.Fill_Rectangle(6, mylcd.Get_Display_Height()-7, 14, mylcd.Get_Display_Height()-7);
@@ -354,7 +354,7 @@ void load_lives(int lives) {
     
     mylcd.Set_Draw_color(RED);
     mylcd.Draw_Pixel(10+18, mylcd.Get_Display_Height()-3);
-    mylcd.Fill_Rectangle(9+18, mylcd.Get_Display_Height()-4,`11+18, mylcd.Get_Display_Height()-4);
+    mylcd.Fill_Rectangle(9+18, mylcd.Get_Display_Height()-4, 11+18, mylcd.Get_Display_Height()-4);
     mylcd.Fill_Rectangle(8+18, mylcd.Get_Display_Height()-5, 12+18, mylcd.Get_Display_Height()-5);
     mylcd.Fill_Rectangle(7+18, mylcd.Get_Display_Height()-6, 13+18, mylcd.Get_Display_Height()-6);
     mylcd.Fill_Rectangle(6+18, mylcd.Get_Display_Height()-7, 14+18, mylcd.Get_Display_Height()-7);
@@ -414,7 +414,7 @@ void load_lives(int lives) {
     
     mylcd.Set_Draw_color(RED);
     mylcd.Draw_Pixel(10+18+18, mylcd.Get_Display_Height()-3);
-    mylcd.Fill_Rectangle(9+18+18, mylcd.Get_Display_Height()-4,`11+18+18, mylcd.Get_Display_Height()-4);
+    mylcd.Fill_Rectangle(9+18+18, mylcd.Get_Display_Height()-4, 11+18+18, mylcd.Get_Display_Height()-4);
     mylcd.Fill_Rectangle(8+18+18, mylcd.Get_Display_Height()-5, 12+18+18, mylcd.Get_Display_Height()-5);
     mylcd.Fill_Rectangle(7+18+18, mylcd.Get_Display_Height()-6, 13+18+18, mylcd.Get_Display_Height()-6);
     mylcd.Fill_Rectangle(6+18+18, mylcd.Get_Display_Height()-7, 14+18+18, mylcd.Get_Display_Height()-7);
@@ -476,7 +476,7 @@ void load_lives(int lives) {
     
     mylcd.Set_Draw_color(RED);
     mylcd.Draw_Pixel(10, mylcd.Get_Display_Height()-3);
-    mylcd.Fill_Rectangle(9, mylcd.Get_Display_Height()-4,`11, mylcd.Get_Display_Height()-4);
+    mylcd.Fill_Rectangle(9, mylcd.Get_Display_Height()-4, 11, mylcd.Get_Display_Height()-4);
     mylcd.Fill_Rectangle(8, mylcd.Get_Display_Height()-5, 12, mylcd.Get_Display_Height()-5);
     mylcd.Fill_Rectangle(7, mylcd.Get_Display_Height()-6, 13, mylcd.Get_Display_Height()-6);
     mylcd.Fill_Rectangle(6, mylcd.Get_Display_Height()-7, 14, mylcd.Get_Display_Height()-7);
@@ -536,7 +536,7 @@ void load_lives(int lives) {
     
     mylcd.Set_Draw_color(LIGHT_GREY);
     mylcd.Draw_Pixel(10+18, mylcd.Get_Display_Height()-3);
-    mylcd.Fill_Rectangle(9+18, mylcd.Get_Display_Height()-4,`11+18, mylcd.Get_Display_Height()-4);
+    mylcd.Fill_Rectangle(9+18, mylcd.Get_Display_Height()-4, 11+18, mylcd.Get_Display_Height()-4);
     mylcd.Fill_Rectangle(8+18, mylcd.Get_Display_Height()-5, 12+18, mylcd.Get_Display_Height()-5);
     mylcd.Fill_Rectangle(7+18, mylcd.Get_Display_Height()-6, 13+18, mylcd.Get_Display_Height()-6);
     mylcd.Fill_Rectangle(6+18, mylcd.Get_Display_Height()-7, 14+18, mylcd.Get_Display_Height()-7);
@@ -596,7 +596,7 @@ void load_lives(int lives) {
     
     mylcd.Set_Draw_color(LIGHT_GREY);
     mylcd.Draw_Pixel(10+18+18, mylcd.Get_Display_Height()-3);
-    mylcd.Fill_Rectangle(9+18+18, mylcd.Get_Display_Height()-4,`11+18+18, mylcd.Get_Display_Height()-4);
+    mylcd.Fill_Rectangle(9+18+18, mylcd.Get_Display_Height()-4, 11+18+18, mylcd.Get_Display_Height()-4);
     mylcd.Fill_Rectangle(8+18+18, mylcd.Get_Display_Height()-5, 12+18+18, mylcd.Get_Display_Height()-5);
     mylcd.Fill_Rectangle(7+18+18, mylcd.Get_Display_Height()-6, 13+18+18, mylcd.Get_Display_Height()-6);
     mylcd.Fill_Rectangle(6+18+18, mylcd.Get_Display_Height()-7, 14+18+18, mylcd.Get_Display_Height()-7);
@@ -693,7 +693,7 @@ void setup() {
     spr1height += 10;
     mylcd.Set_Draw_color(DARK_GREY);
     mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
-    if (spr1height == 230 || spr1height == 240) {
+    if (spr1height == 230) {
       if (spr1side == 0) {
         if (rock_x < spr1length) {
           --lives;
@@ -740,7 +740,7 @@ void setup() {
     mylcd.Set_Draw_color(DARK_GREY);
     mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
     mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
-    if (spr1height == 230 || spr1height == 240) {
+    if (spr1height == 230) {
       if (spr1side == 0) {
         if (rock_x < spr1length) {
           --lives;
@@ -752,7 +752,7 @@ void setup() {
         }
       }
     }
-    if (spr2height == 230 || spr2height == 240) {
+    if (spr2height == 230) {
       if (spr2side == 0) {
         if (rock_x < spr2length) {
           --lives;
@@ -825,7 +825,7 @@ void loop() {
   mylcd.Set_Draw_color(DARK_GREY);
   mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
   mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
-  if (spr1height == 230 || spr1height == 240) {
+  if (spr1height == 230 ) {
       if (spr1side == 0) {
         if (rock_x < spr1length) {
           --lives;
@@ -837,7 +837,7 @@ void loop() {
         }
       }
     }
-    if (spr2height == 230 || spr2height == 240) {
+    if (spr2height == 230) {
       if (spr2side == 0) {
         if (rock_x < spr2length) {
           --lives;
@@ -882,7 +882,7 @@ void loop() {
     mylcd.Set_Draw_color(DARK_GREY);
     mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
     mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
-    if (spr1height == 230 || spr1height == 240) {
+    if (spr1height == 230) {
       if (spr1side == 0) {
         if (rock_x < spr1length) {
           --lives;
@@ -894,7 +894,7 @@ void loop() {
         }
       }
     }
-    if (spr2height == 230 || spr2height == 240) {
+    if (spr2height == 230) {
       if (spr2side == 0) {
         if (rock_x < spr2length) {
           --lives;
@@ -960,7 +960,7 @@ void loop() {
   mylcd.Set_Draw_color(DARK_GREY);
   mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
   mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
-  if (spr1height == 230 || spr1height == 240) {
+  if (spr1height == 230) {
       if (spr1side == 0) {
         if (rock_x < spr1length) {
           --lives;
@@ -972,7 +972,7 @@ void loop() {
         }
       }
     }
-    if (spr2height == 230 || spr2height == 240) {
+    if (spr2height == 230) {
       if (spr2side == 0) {
         if (rock_x < spr2length) {
           --lives;
@@ -1017,7 +1017,7 @@ void loop() {
     mylcd.Set_Draw_color(DARK_GREY);
     mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
     mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
-    if (spr1height == 230 || spr1height == 240) {
+    if (spr1height == 230) {
       if (spr1side == 0) {
         if (rock_x < spr1length) {
           --lives;
@@ -1029,7 +1029,7 @@ void loop() {
         }
       }
     }
-    if (spr2height == 230 || spr2height == 240) {
+    if (spr2height == 230) {
       if (spr2side == 0) {
         if (rock_x < spr2length) {
           --lives;
