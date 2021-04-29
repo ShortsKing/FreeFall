@@ -412,7 +412,7 @@ void load_lives(int lives) {
     mylcd.Draw_Pixel(15+18+18, mylcd.Get_Display_Height()-15);
     mylcd.Draw_Pixel(16+18+18, mylcd.Get_Display_Height()-15);
     
-    mylcd.Set_Draw_color(RED);
+    mylcd.Set_Draw_color(LIGHT_GRAY);
     mylcd.Draw_Pixel(10+18+18, mylcd.Get_Display_Height()-3);
     mylcd.Fill_Rectangle(9+18+18, mylcd.Get_Display_Height()-4, 11+18+18, mylcd.Get_Display_Height()-4);
     mylcd.Fill_Rectangle(8+18+18, mylcd.Get_Display_Height()-5, 12+18+18, mylcd.Get_Display_Height()-5);
