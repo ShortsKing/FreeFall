@@ -128,6 +128,8 @@ void load_lives(int lives) {
     mylcd.Fill_Rectangle(13, mylcd.Get_Display_Height()-14, 16, mylcd.Get_Display_Height()-14);
     
     mylcd.Set_Draw_color(WHITE);
+    mylcd.Draw_Pixel(6, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(5, mylcd.Get_Display_Height()-11, 5, mylcd.Get_Display_Height()-10);
     
     //heart2
     mylcd.Set_Draw_color(BLACK);
@@ -188,6 +190,8 @@ void load_lives(int lives) {
     mylcd.Fill_Rectangle(13+18, mylcd.Get_Display_Height()-14, 16+18, mylcd.Get_Display_Height()-14);
     
     mylcd.Set_Draw_color(WHITE);
+    mylcd.Draw_Pixel(6+18, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(5+18, mylcd.Get_Display_Height()-11, 5+18, mylcd.Get_Display_Height()-10);
     
     //heart3
     mylcd.Set_Draw_color(BLACK);
@@ -248,6 +252,8 @@ void load_lives(int lives) {
     mylcd.Fill_Rectangle(13+18+18, mylcd.Get_Display_Height()-14, 16+18+18, mylcd.Get_Display_Height()-14);
     
     mylcd.Set_Draw_color(WHITE);
+    mylcd.Draw_Pixel(6+18+18, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(5+18+18, mylcd.Get_Display_Height()-11, 5+18+18, mylcd.Get_Display_Height()-10);
     
   }
   else if (lives == 2) {
@@ -310,6 +316,8 @@ void load_lives(int lives) {
     mylcd.Fill_Rectangle(13, mylcd.Get_Display_Height()-14, 16, mylcd.Get_Display_Height()-14);
     
     mylcd.Set_Draw_color(WHITE);
+    mylcd.Draw_Pixel(6, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(5, mylcd.Get_Display_Height()-11, 5, mylcd.Get_Display_Height()-10);
     
     //heart2
     mylcd.Set_Draw_color(BLACK);
@@ -370,6 +378,8 @@ void load_lives(int lives) {
     mylcd.Fill_Rectangle(13+18, mylcd.Get_Display_Height()-14, 16+18, mylcd.Get_Display_Height()-14);
     
     mylcd.Set_Draw_color(WHITE);
+    mylcd.Draw_Pixel(6+18, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(5+18, mylcd.Get_Display_Height()-11, 5+18, mylcd.Get_Display_Height()-10);
     
     //heart3
     mylcd.Set_Draw_color(BLACK);
@@ -430,6 +440,8 @@ void load_lives(int lives) {
     mylcd.Fill_Rectangle(13+18+18, mylcd.Get_Display_Height()-14, 16+18+18, mylcd.Get_Display_Height()-14);
     
     mylcd.Set_Draw_color(WHITE);
+    mylcd.Draw_Pixel(6+18+18, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(5+18+18, mylcd.Get_Display_Height()-11, 5+18+18, mylcd.Get_Display_Height()-10);
     
   }
   else if (lives == 1) {
@@ -492,6 +504,8 @@ void load_lives(int lives) {
     mylcd.Fill_Rectangle(13, mylcd.Get_Display_Height()-14, 16, mylcd.Get_Display_Height()-14);
     
     mylcd.Set_Draw_color(WHITE);
+    mylcd.Draw_Pixel(6, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(5, mylcd.Get_Display_Height()-11, 5, mylcd.Get_Display_Height()-10);
     
     //heart2
     mylcd.Set_Draw_color(BLACK);
@@ -552,6 +566,8 @@ void load_lives(int lives) {
     mylcd.Fill_Rectangle(13+18, mylcd.Get_Display_Height()-14, 16+18, mylcd.Get_Display_Height()-14);
     
     mylcd.Set_Draw_color(WHITE);
+    mylcd.Draw_Pixel(6+18, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(5+18, mylcd.Get_Display_Height()-11, 5+18, mylcd.Get_Display_Height()-10);
     
     //heart3
     mylcd.Set_Draw_color(BLACK);
@@ -612,6 +628,8 @@ void load_lives(int lives) {
     mylcd.Fill_Rectangle(13+18+18, mylcd.Get_Display_Height()-14, 16+18+18, mylcd.Get_Display_Height()-14);
     
     mylcd.Set_Draw_color(WHITE);
+    mylcd.Draw_Pixel(6+18+18, mylcd.Get_Display_Height()-12);
+    mylcd.Fill_Rectangle(5+18+18, mylcd.Get_Display_Height()-11, 5+18+18, mylcd.Get_Display_Height()-10);
     
   }
 }
@@ -619,33 +637,36 @@ void load_lives(int lives) {
 
 void setup() {
   mylcd.InitLCD()
-  
+  bool start = false;
   while(true) {
-   //start screen
-   mylcd.Set_Text_Back_colour(CYAN);
-   mylcd.Fill_Screen(CYAN);
-   mylcd.Set_Text_colour(MAGENTA);
-   mylcd.Set_Text_Size(14);
-   mylcd.Print_String("NOSE", 0, 0);
-   mylcd.Print_String("DIVE", 0, 100);
-   mylcd.Set_Draw_color(MAGENTA);
-   mylcd.Draw_Fast_HLine(0, 430, 320);
-   mylcd.Draw_Fast_HLine(0, 431, 320);
-   mylcd.Draw_Fast_HLine(0, 432, 320);
-   mylcd.Draw_Fast_HLine(0, 433, 320);
-   mylcd.Draw_Fast_HLine(0, 434, 320);
-   mylcd.Set_Text_Size(4);
-   mylcd.Print_String("Difficulty:", 5, 439);
-   mylcd.Print_String("High Score:", 5, 390);
-   long timerstart = millis();
-   if(analogRead(2) > 1000) {
-     ++difficulty;
-   }
-   while(true) {
-     if(millis() - timerstart >= 1000) {
-       break;
-     }
-   }
+    //start screen
+    mylcd.Set_Text_Back_colour(CYAN);
+    mylcd.Fill_Screen(CYAN);
+    mylcd.Set_Text_colour(MAGENTA);
+    mylcd.Set_Text_Size(14);
+    mylcd.Print_String("NOSE", 0, 0);
+    mylcd.Print_String("DIVE", 0, 100);
+    mylcd.Set_Draw_color(MAGENTA);
+    mylcd.Draw_Fast_HLine(0, 430, 320);
+    mylcd.Draw_Fast_HLine(0, 431, 320);
+    mylcd.Draw_Fast_HLine(0, 432, 320);
+    mylcd.Draw_Fast_HLine(0, 433, 320);
+    mylcd.Draw_Fast_HLine(0, 434, 320);
+    mylcd.Set_Text_Size(4);
+    mylcd.Print_String("Difficulty:", 5, 439);
+    mylcd.Print_String("High Score:", 5, 390);
+    long timerstart = millis();
+    while(true) {
+      if(millis() - timerstart >= 1000) {
+        break;
+      }
+      if(analogRead(3) == 1023) {
+        start = true;
+      }
+    }
+    if(start == true) {
+      break;
+    }
   }
 }
 
