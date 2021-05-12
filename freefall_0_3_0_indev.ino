@@ -634,6 +634,13 @@ void load_lives(int lives) {
   }
 }
 
+long timerstart;
+bool pressed1 = false;
+bool pressed2 = false;
+bool pressed3 = false;
+bool pressed4 = false;
+bool pressed5 = false;
+bool pressed6 = false;
 
 void setup() {
   mylcd.InitLCD()
@@ -655,7 +662,7 @@ void setup() {
     mylcd.Set_Text_Size(4);
     mylcd.Print_String("Difficulty:", 5, 439);
     mylcd.Print_String("High Score:", 5, 390);
-    long timerstart = millis();
+    timerstart = millis();
     while(true) {
       if(millis() - timerstart >= 1000) {
         break;
@@ -723,19 +730,28 @@ void loop() {
   
     for(int i = 1; i < 25; ++i) {
       //new frame
-      mylcd.Set_Draw_color(CYAN);
-      mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
-      if (analogRead(1) > 1000) {
-        if (rock_x > 0) {
-          rock_x -= 10;
-        }
-      }
-      if (analogRead(5) > 1000) {
-        if (rock_x < 300) {
-          rock_x += 10;
-        }
-      }
       mylcd.Set_Draw_color(LIGHT_GREY);
+      mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
+      timerstart = millis();
+      while(timerstart - millis() <= 200) {
+        if(pressed1 == false) {
+          if (analogRead(1) > 1000) {
+            if (rock_x > 0) {
+              rock_x -= 10;
+              pressed1 = true;
+            }
+          }
+        }
+        if(pressed5 == false)
+          if (analogRead(5) > 1000) {
+            if (rock_x < 300) {
+              rock_x += 10;
+              pressed5 = true;
+            }
+          }
+        }
+      }
+      mylcd.Set_Draw_color(CYAN);
       mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
       mylcd.Set_Draw_color(CYAN);
       mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
@@ -761,7 +777,6 @@ void loop() {
         //TERMINATE
       }
       load_lives(lives);
-      delay(slowness);
     }
   
     //add sprite 2
