@@ -643,41 +643,44 @@ bool pressed5 = false;
 bool pressed6 = false;
 
 void setup() {
-  mylcd.InitLCD()
-  bool start = false;
-  while(true) {
-    //start screen
-    mylcd.Set_Text_Back_colour(CYAN);
-    mylcd.Fill_Screen(CYAN);
-    mylcd.Set_Text_colour(MAGENTA);
-    mylcd.Set_Text_Size(14);
-    mylcd.Print_String("NOSE", 0, 0);
-    mylcd.Print_String("DIVE", 0, 100);
-    mylcd.Set_Draw_color(MAGENTA);
-    mylcd.Draw_Fast_HLine(0, 430, 320);
-    mylcd.Draw_Fast_HLine(0, 431, 320);
-    mylcd.Draw_Fast_HLine(0, 432, 320);
-    mylcd.Draw_Fast_HLine(0, 433, 320);
-    mylcd.Draw_Fast_HLine(0, 434, 320);
-    mylcd.Set_Text_Size(4);
-    mylcd.Print_String("Difficulty:", 5, 439);
-    mylcd.Print_String("High Score:", 5, 390);
-    timerstart = millis();
-    while(true) {
-      if(millis() - timerstart >= 1000) {
-        break;
-      }
-      if(analogRead(3) == 1023) {
-        start = true;
-      }
-    }
-    if(start == true) {
-      break;
-    }
-  }
+  mylcd.InitLCD();
 }
 
 void loop() {
+
+  start_screen:
+    bool start = false;
+    while(true) {
+      //start screen
+      mylcd.Set_Text_Back_colour(CYAN);
+      mylcd.Fill_Screen(CYAN);
+      mylcd.Set_Text_colour(MAGENTA);
+      mylcd.Set_Text_Size(14);
+      mylcd.Print_String("NOSE", 0, 0);
+      mylcd.Print_String("DIVE", 0, 100);
+      mylcd.Set_Draw_color(MAGENTA);
+      mylcd.Draw_Fast_HLine(0, 430, 320);
+      mylcd.Draw_Fast_HLine(0, 431, 320);
+      mylcd.Draw_Fast_HLine(0, 432, 320);
+      mylcd.Draw_Fast_HLine(0, 433, 320);
+      mylcd.Draw_Fast_HLine(0, 434, 320);
+      mylcd.Set_Text_Size(4);
+      mylcd.Print_String("Difficulty:", 5, 439);
+      mylcd.Print_String("High Score:", 5, 390);
+      timerstart = millis();
+      while(true) {
+        if(millis() - timerstart >= 1000) {
+          break;
+        }
+        if(analogRead(3) == 1023) {
+          start = true;
+        }
+      }
+      if(start == true) {
+        break;
+      }
+    }
+
   restart:
     //generate sprite 1 variables
     randomSeed(analogRead(A0));
@@ -726,7 +729,7 @@ void loop() {
     //actually generate sprite 1
     mylcd.Set_Draw_color(DARK_GREY);
     mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
-    delay(slowness);
+    
   
     for(int i = 1; i < 25; ++i) {
       //new frame
@@ -742,7 +745,7 @@ void loop() {
             }
           }
         }
-        if(pressed5 == false)
+        if(pressed5 == false) {
           if (analogRead(5) > 1000) {
             if (rock_x < 300) {
               rock_x += 10;
@@ -773,25 +776,33 @@ void loop() {
       if (lives == 0) {
         lives = 3;
         //TERMINATE
-        //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
+        goto death_screen;
         //TERMINATE
       }
       load_lives(lives);
     }
-  
     //add sprite 2
     for(int i = 1; i < 25; ++i) {
       //new frame
       mylcd.Set_Draw_color(CYAN);
       mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
-      if (analogRead(1) > 1000) {
-        if (rock_x > 0) {
-          rock_x -= 10;
+      timerstart = millis();
+      while(timerstart - millis() <= 200) {
+        if(pressed1 == false) {
+          if (analogRead(1) > 1000) {
+            if (rock_x > 0) {
+              rock_x -= 10;
+              pressed1 = true;
+            }
+          }
         }
-      }
-      if (analogRead(5) > 1000) {
-        if (rock_x < 300) {
-          rock_x += 10;
+        if(pressed5 == false) {
+          if (analogRead(5) > 1000) {
+            if (rock_x < 300) {
+              rock_x += 10;
+              pressed5 = true;
+            }
+          }
         }
       }
       mylcd.Set_Draw_color(LIGHT_GREY);
@@ -831,55 +842,65 @@ void loop() {
       if (lives == 0) {
         lives = 3;
         //TERMINATE
-        //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
+        goto death_screen;
         //TERMINATE
       }
       load_lives(lives);
-      delay(slowness);
     }
   
-  }
+  
   
   int side = 0;
   int length = 0;
-
-
-  //re-randomize sprite 1 size
-  randomSeed(analogRead(A0));
-  side = random(2);
-  randomSeed(analogRead(A0));
-  length = random(50, 170);
   
-  spr1side = side;
-  spr1length = length;
-  
-  if (side == 1) {
-    x1spr1 = mylcd.Get_Display_Width()-length;
-    y1spr1 = mylcd.Get_Display_Height()-10; //-i
-    x2spr1 = mylcd.Get_Display_Width();
-    y2spr1 = mylcd.Get_Display_Height(); //-i
-  }
-  else {
-    x1spr1 = 0;
-    y1spr1 = mylcd.Get_Display_Height()-10; //-i
-    x2spr1 = length;
-    y2spr1 = mylcd.Get_Display_Height(); //-i
-  }
-  
-  mylcd.Set_Draw_color(CYAN);
+  //begin automated section of game
+  while(true) {
+    //re-randomize sprite 1 size
+    randomSeed(analogRead(A0));
+    side = random(2);
+    randomSeed(analogRead(A0));
+    length = random(50, 170);
+    
+    spr1side = side;
+    spr1length = length;
+    
+    if (side == 1) {
+      x1spr1 = mylcd.Get_Display_Width()-length;
+      y1spr1 = mylcd.Get_Display_Height()-10; //-i
+      x2spr1 = mylcd.Get_Display_Width();
+      y2spr1 = mylcd.Get_Display_Height(); //-i
+    }
+    else {
+      x1spr1 = 0;
+      y1spr1 = mylcd.Get_Display_Height()-10; //-i
+      x2spr1 = length;
+      y2spr1 = mylcd.Get_Display_Height(); //-i
+    }
+    
+    mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
-    if (analogRead(1) > 1000) {
-      if (rock_x > 0) {
-        rock_x -= 10;
+    timerstart = millis();
+    while(timerstart - millis() <= 200) {
+      if(pressed1 == false) {
+        if (analogRead(1) > 1000) {
+          if (rock_x > 0) {
+            rock_x -= 10;
+            pressed1 = true;
+          }
+        }
+      }
+      if(pressed5 == false) {
+        if (analogRead(5) > 1000) {
+          if (rock_x < 300) {
+            rock_x += 10;
+            pressed5 = true;
+          }
+        }
       }
     }
-    if (analogRead(5) > 1000) {
-      if (rock_x < 300) {
-        rock_x += 10;
-      }
-    }
-    mylcd.Set_Draw_color(LIGHT_GREY);
-    mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
+    
+      mylcd.Set_Draw_color(LIGHT_GREY);
+      mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
   mylcd.Set_Draw_color(CYAN);
   mylcd.Fill_Rectangle(x1spr1, y1spr1-spr1height, x2spr1, y2spr1-spr1height);
   mylcd.Fill_Rectangle(x1spr2, y1spr2-spr2height, x2spr2, y2spr2-spr2height);
@@ -915,7 +936,7 @@ void loop() {
     if (lives == 0) {
       lives = 3;
       //TERMINATE
-      //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
+      goto death_screen;
       //TERMINATE
     }
   load_lives(lives);
@@ -925,16 +946,25 @@ void loop() {
     //new frame
     mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
-    if (analogRead(1) > 1000) {
-      if (rock_x > 0) {
-        rock_x -= 10;
+    timerstart = millis();
+      while(timerstart - millis() <= 200) {
+        if(pressed1 == false) {
+          if (analogRead(1) > 1000) {
+            if (rock_x > 0) {
+              rock_x -= 10;
+              pressed1 = true;
+            }
+          }
+        }
+        if(pressed5 == false) {
+          if (analogRead(5) > 1000) {
+            if (rock_x < 300) {
+              rock_x += 10;
+              pressed5 = true;
+            }
+          }
+        }
       }
-    }
-    if (analogRead(5) > 1000) {
-      if (rock_x < 300) {
-        rock_x += 10;
-      }
-    }
     mylcd.Set_Draw_color(LIGHT_GREY);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
     mylcd.Set_Draw_color(CYAN);
@@ -972,11 +1002,10 @@ void loop() {
     if (lives == 0) {
       lives = 3;
       //TERMINATE
-      //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
+      goto death_screen;
       //TERMINATE
     }
     load_lives(lives);
-    delay(slowness);
   }
   
   //re-randomize sprite 2 size
@@ -1003,16 +1032,25 @@ void loop() {
   
   mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
-    if (analogRead(1) > 1000) {
-      if (rock_x > 0) {
-        rock_x -= 10;
+    timerstart = millis();
+      while(timerstart - millis() <= 200) {
+        if(pressed1 == false) {
+          if (analogRead(1) > 1000) {
+            if (rock_x > 0) {
+              rock_x -= 10;
+              pressed1 = true;
+            }
+          }
+        }
+        if(pressed5 == false) {
+          if (analogRead(5) > 1000) {
+            if (rock_x < 300) {
+              rock_x += 10;
+              pressed5 = true;
+            }
+          }
+        }
       }
-    }
-    if (analogRead(5) > 1000) {
-      if (rock_x < 300) {
-        rock_x += 10;
-      }
-    }
     mylcd.Set_Draw_color(LIGHT_GREY);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
   mylcd.Set_Draw_color(CYAN);
@@ -1050,7 +1088,7 @@ void loop() {
     if (lives == 0) {
       lives = 3;
       //TERMINATE
-      //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
+      goto death_screen;
       //TERMINATE
     }
   load_lives(lives);
@@ -1060,16 +1098,25 @@ void loop() {
     //new frame
     mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
-    if (analogRead(1) > 1000) {
-      if (rock_x > 0) {
-        rock_x -= 10;
+    timerstart = millis();
+      while(timerstart - millis() <= 200) {
+        if(pressed1 == false) {
+          if (analogRead(1) > 1000) {
+            if (rock_x > 0) {
+              rock_x -= 10;
+              pressed1 = true;
+            }
+          }
+        }
+        if(pressed5 == false) {
+          if (analogRead(5) > 1000) {
+            if (rock_x < 300) {
+              rock_x += 10;
+              pressed5 = true;
+            }
+          }
+        }
       }
-    }
-    if (analogRead(5) > 1000) {
-      if (rock_x < 300) {
-        rock_x += 10;
-      }
-    }
     mylcd.Set_Draw_color(LIGHT_GREY);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
     mylcd.Set_Draw_color(CYAN);
@@ -1107,10 +1154,44 @@ void loop() {
     if (lives == 0) {
       lives = 3;
       //TERMINATE
-      //->->->->->->->->->->->->TERMINATE THE GAME RIGHT HERE ON THIS SPOT<-<-<-<-<-<-<-<-<-<-<-<-
+      goto death_screen;
       //TERMINATE
     }
     load_lives(lives);
     delay(slowness);
+  }
+}
+}
+death_screen:
+  bool start = false;
+  while(true) {
+    //start screen
+    mylcd.Set_Text_Back_colour(CYAN);
+    mylcd.Fill_Screen(CYAN);
+    mylcd.Set_Text_colour(MAGENTA);
+    mylcd.Set_Text_Size(14);
+    mylcd.Print_String("GAME", 0, 0);
+    mylcd.Print_String("OVER", 0, 100);
+    mylcd.Set_Draw_color(MAGENTA);
+    mylcd.Draw_Fast_HLine(0, 430, 320);
+    mylcd.Draw_Fast_HLine(0, 431, 320);
+    mylcd.Draw_Fast_HLine(0, 432, 320);
+    mylcd.Draw_Fast_HLine(0, 433, 320);
+    mylcd.Draw_Fast_HLine(0, 434, 320);
+    mylcd.Set_Text_Size(4);
+    mylcd.Print_String("Difficulty:", 5, 439);
+    mylcd.Print_String("High Score:", 5, 390);
+    timerstart = millis();
+    while(true) {
+      if(millis() - timerstart >= 1000) {
+        break;
+      }
+      if(analogRead(3) == 1023) {
+        start = true;
+      }
+    }
+    if(start == true) {
+      break;
+    }
   }
 }
