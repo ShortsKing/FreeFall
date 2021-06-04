@@ -634,7 +634,11 @@ void load_lives(int lives) {
   }
 }
 
-long score = 0;
+byte difficulty;
+long highscore;
+
+
+long score;
 
 long timerstart;
 bool pressed1 = false;
@@ -1058,7 +1062,6 @@ long gameplay() {
       //TERMINATE
     }
   load_lives(lives);
-  delay(slowness);
   
   for(int i = 1; i < 24; ++i) {
     //new frame
@@ -1129,10 +1132,8 @@ long gameplay() {
 }
 }
 
-void loop() {
-
-  start_screen:
-    bool start = false;
+byte start() {
+  bool start = false;
     while(true) {
       //start screen
       mylcd.Set_Text_Back_colour(CYAN);
@@ -1156,18 +1157,13 @@ void loop() {
           break;
         }
         if(analogRead(3) == 1023) {
-          start = true;
+          return difficulty;
         }
       }
-      if(start == true) {
-        break;
-      }
     }
+}
 
-  restart:
-   
-death_screen:
-  bool start = false;
+long game_over() {
   while(true) {
     //start screen
     mylcd.Set_Text_Back_colour(CYAN);
@@ -1191,11 +1187,19 @@ death_screen:
         break;
       }
       if(analogRead(3) == 1023) {
-        start = true;
+        return high_score;
       }
     }
-    if(start == true) {
-      break;
-    }
   }
+}
+
+void loop() {
+
+  start_screen:
+    
+
+  restart:
+   
+death_screen:
+  
 }
