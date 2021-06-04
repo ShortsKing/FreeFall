@@ -634,6 +634,8 @@ void load_lives(int lives) {
   }
 }
 
+long score = 0;
+
 long timerstart;
 bool pressed1 = false;
 bool pressed2 = false;
@@ -646,43 +648,8 @@ void setup() {
   mylcd.InitLCD();
 }
 
-void loop() {
-
-  start_screen:
-    bool start = false;
-    while(true) {
-      //start screen
-      mylcd.Set_Text_Back_colour(CYAN);
-      mylcd.Fill_Screen(CYAN);
-      mylcd.Set_Text_colour(MAGENTA);
-      mylcd.Set_Text_Size(14);
-      mylcd.Print_String("NOSE", 0, 0);
-      mylcd.Print_String("DIVE", 0, 100);
-      mylcd.Set_Draw_color(MAGENTA);
-      mylcd.Draw_Fast_HLine(0, 430, 320);
-      mylcd.Draw_Fast_HLine(0, 431, 320);
-      mylcd.Draw_Fast_HLine(0, 432, 320);
-      mylcd.Draw_Fast_HLine(0, 433, 320);
-      mylcd.Draw_Fast_HLine(0, 434, 320);
-      mylcd.Set_Text_Size(4);
-      mylcd.Print_String("Difficulty:", 5, 439);
-      mylcd.Print_String("High Score:", 5, 390);
-      timerstart = millis();
-      while(true) {
-        if(millis() - timerstart >= 1000) {
-          break;
-        }
-        if(analogRead(3) == 1023) {
-          start = true;
-        }
-      }
-      if(start == true) {
-        break;
-      }
-    }
-
-  restart:
-    //generate sprite 1 variables
+long gameplay() {
+   //generate sprite 1 variables
     randomSeed(analogRead(A0));
     int side = random(2);
     randomSeed(analogRead(A0));
@@ -776,7 +743,7 @@ void loop() {
       if (lives == 0) {
         lives = 3;
         //TERMINATE
-        goto death_screen;
+        return score;
         //TERMINATE
       }
       load_lives(lives);
@@ -842,7 +809,7 @@ void loop() {
       if (lives == 0) {
         lives = 3;
         //TERMINATE
-        goto death_screen;
+        return score;
         //TERMINATE
       }
       load_lives(lives);
@@ -936,11 +903,10 @@ void loop() {
     if (lives == 0) {
       lives = 3;
       //TERMINATE
-      goto death_screen;
+      return score;
       //TERMINATE
     }
   load_lives(lives);
-  delay(slowness);
     
   for(int i = 1; i < 24; ++i) {
     //new frame
@@ -1002,7 +968,7 @@ void loop() {
     if (lives == 0) {
       lives = 3;
       //TERMINATE
-      goto death_screen;
+      return score;
       //TERMINATE
     }
     load_lives(lives);
@@ -1088,7 +1054,7 @@ void loop() {
     if (lives == 0) {
       lives = 3;
       //TERMINATE
-      goto death_screen;
+      return score;
       //TERMINATE
     }
   load_lives(lives);
@@ -1154,14 +1120,52 @@ void loop() {
     if (lives == 0) {
       lives = 3;
       //TERMINATE
-      goto death_screen;
+      return score;
       //TERMINATE
     }
     load_lives(lives);
-    delay(slowness);
   }
 }
 }
+}
+
+void loop() {
+
+  start_screen:
+    bool start = false;
+    while(true) {
+      //start screen
+      mylcd.Set_Text_Back_colour(CYAN);
+      mylcd.Fill_Screen(CYAN);
+      mylcd.Set_Text_colour(MAGENTA);
+      mylcd.Set_Text_Size(14);
+      mylcd.Print_String("NOSE", 0, 0);
+      mylcd.Print_String("DIVE", 0, 100);
+      mylcd.Set_Draw_color(MAGENTA);
+      mylcd.Draw_Fast_HLine(0, 430, 320);
+      mylcd.Draw_Fast_HLine(0, 431, 320);
+      mylcd.Draw_Fast_HLine(0, 432, 320);
+      mylcd.Draw_Fast_HLine(0, 433, 320);
+      mylcd.Draw_Fast_HLine(0, 434, 320);
+      mylcd.Set_Text_Size(4);
+      mylcd.Print_String("Difficulty:", 5, 439);
+      mylcd.Print_String("High Score:", 5, 390);
+      timerstart = millis();
+      while(true) {
+        if(millis() - timerstart >= 1000) {
+          break;
+        }
+        if(analogRead(3) == 1023) {
+          start = true;
+        }
+      }
+      if(start == true) {
+        break;
+      }
+    }
+
+  restart:
+   
 death_screen:
   bool start = false;
   while(true) {
