@@ -1194,12 +1194,9 @@ long game_over() {
 }
 
 void loop() {
-
-  start_screen:
-    
-
-  restart:
-   
-death_screen:
+  start();
+  gameplay();
+  game_over();
+  
   
 }
