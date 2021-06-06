@@ -17,4 +17,4 @@ parts i used. thank you for any support you have given, and i hope you receive t
 
 
 
-liscense: use for anything other than personal use, and you will die.
+liscense: in no other circumstances than personal use are you allowed to use this software, unless granted permission by read-only document sent by email. you can request such a document by sending an email to peters.johne@gmail.com. document will be no longer valid if the email is deleted.
