@@ -1,7 +1,7 @@
 
 
-#include <LCDWIKI_GUI.h> //Core graphics library
-#include <LCDWIKI_KBV.h> //Hardware-specific library
+#include <E:\FreeFall\FreeFall-main\libraries\LCDWIKI_GUI\LCDWIKI_GUI.h> //Core graphics library
+#include <E:\FreeFall\FreeFall-main\libraries\LCDWIKI_KBV\LCDWIKI_KBV.h> //Hardware-specific library
 
 
 
@@ -652,7 +652,7 @@ void setup() {
   mylcd.InitLCD();
 }
 
-long gameplay() {
+long gameplay(int game_delay) {
    //generate sprite 1 variables
     randomSeed(analogRead(A0));
     int side = random(2);
@@ -707,7 +707,7 @@ long gameplay() {
       mylcd.Set_Draw_color(LIGHT_GREY);
       mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
       timerstart = millis();
-      while(timerstart - millis() <= 200) {
+      while(timerstart - millis() <= game_delay) {
         if(pressed1 == false) {
           if (analogRead(1) > 1000) {
             if (rock_x > 0) {
@@ -758,7 +758,7 @@ long gameplay() {
       mylcd.Set_Draw_color(CYAN);
       mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
       timerstart = millis();
-      while(timerstart - millis() <= 200) {
+      while(timerstart - millis() <= game_delay) {
         if(pressed1 == false) {
           if (analogRead(1) > 1000) {
             if (rock_x > 0) {
@@ -851,7 +851,7 @@ long gameplay() {
     mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
     timerstart = millis();
-    while(timerstart - millis() <= 200) {
+    while(timerstart - millis() <= game_delay) {
       if(pressed1 == false) {
         if (analogRead(1) > 1000) {
           if (rock_x > 0) {
@@ -917,7 +917,7 @@ long gameplay() {
     mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
     timerstart = millis();
-      while(timerstart - millis() <= 200) {
+      while(timerstart - millis() <= game_delay) {
         if(pressed1 == false) {
           if (analogRead(1) > 1000) {
             if (rock_x > 0) {
@@ -1003,7 +1003,7 @@ long gameplay() {
   mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
     timerstart = millis();
-      while(timerstart - millis() <= 200) {
+      while(timerstart - millis() <= game_delay) {
         if(pressed1 == false) {
           if (analogRead(1) > 1000) {
             if (rock_x > 0) {
@@ -1068,7 +1068,7 @@ long gameplay() {
     mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
     timerstart = millis();
-      while(timerstart - millis() <= 200) {
+      while(timerstart - millis() <= game_delay) {
         if(pressed1 == false) {
           if (analogRead(1) > 1000) {
             if (rock_x > 0) {
@@ -1132,7 +1132,7 @@ long gameplay() {
 }
 }
 
-byte start() {
+byte start(long score, long highscore) {
   bool start = false;
     while(true) {
       //start screen
@@ -1163,7 +1163,7 @@ byte start() {
     }
 }
 
-long game_over() {
+long game_over(long score, long highscore) {
   while(true) {
     //start screen
     mylcd.Set_Text_Back_colour(CYAN);
