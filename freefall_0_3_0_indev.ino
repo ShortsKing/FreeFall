@@ -1132,7 +1132,7 @@ long gameplay(int game_delay) {
 }
 }
 
-byte start(long score, long highscore) {
+byte start(/*long score, long highscore*/) {
   bool start = false;
     while(true) {
       //start screen
@@ -1163,8 +1163,9 @@ byte start(long score, long highscore) {
     }
 }
 
-long game_over(long score, long highscore) {
+void game_over(long score/*, long highscore*/) {
   while(true) {
+    bool start = false;
     //start screen
     mylcd.Set_Text_Back_colour(CYAN);
     mylcd.Fill_Screen(CYAN);
@@ -1187,16 +1188,18 @@ long game_over(long score, long highscore) {
         break;
       }
       if(analogRead(3) == 1023) {
-        return high_score;
+        start = true;
       }
     }
+  if(start == true) {
+    break;
+  }
   }
 }
 
 void loop() {
   start();
-  gameplay();
-  game_over();
+  game_over(gameplay(200));
   
   
 }
