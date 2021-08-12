@@ -1,9 +1,7 @@
 
-
-#include <E:\FreeFall\FreeFall-main\libraries\LCDWIKI_GUI\LCDWIKI_GUI.h> //Core graphics library
-#include <E:\FreeFall\FreeFall-main\libraries\LCDWIKI_KBV\LCDWIKI_KBV.h> //Hardware-specific library
-
-
+#include "E:\FreeFall\FreeFall-main\libraries\LCDWIKI_GUI\LCDWIKI_GUI.h" //Core graphics library
+#include "E:\FreeFall\FreeFall-main\libraries\LCDWIKI_KBV\LCDWIKI_KBV.h" //Hardware-specific library
+#include "E:\FreeFall\FreeFall-main\libraries\EEPROM\src\EEPROM.h" //Memory library for storing the high score
 
 //the definiens of 16bit mode as follow:
 //if the IC model is known or the modules is unreadable,you can use this constructed function
@@ -634,11 +632,10 @@ void load_lives(int lives) {
   }
 }
 
-byte difficulty;
-long highscore;
+unsigned long high_score;
 
 
-long score;
+unsigned long score;
 
 long timerstart;
 bool pressed1 = false;
@@ -649,10 +646,10 @@ bool pressed5 = false;
 bool pressed6 = false;
 
 void setup() {
-  mylcd.InitLCD();
+  mylcd.Init_LCD();
 }
 
-long gameplay(int game_delay) {
+long gameplay(byte difficulty) {
    //generate sprite 1 variables
     randomSeed(analogRead(A0));
     int side = random(2);
@@ -707,7 +704,7 @@ long gameplay(int game_delay) {
       mylcd.Set_Draw_color(LIGHT_GREY);
       mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
       timerstart = millis();
-      while(timerstart - millis() <= game_delay) {
+      while(timerstart - millis() <= 200) {
         if(pressed1 == false) {
           if (analogRead(1) > 1000) {
             if (rock_x > 0) {
@@ -758,7 +755,7 @@ long gameplay(int game_delay) {
       mylcd.Set_Draw_color(CYAN);
       mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
       timerstart = millis();
-      while(timerstart - millis() <= game_delay) {
+      while(timerstart - millis() <= 200) {
         if(pressed1 == false) {
           if (analogRead(1) > 1000) {
             if (rock_x > 0) {
@@ -821,8 +818,8 @@ long gameplay(int game_delay) {
   
   
   
-  int side = 0;
-  int length = 0;
+  side = 0;
+  length = 0;
   
   //begin automated section of game
   while(true) {
@@ -851,7 +848,7 @@ long gameplay(int game_delay) {
     mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
     timerstart = millis();
-    while(timerstart - millis() <= game_delay) {
+    while(timerstart - millis() <= 200) {
       if(pressed1 == false) {
         if (analogRead(1) > 1000) {
           if (rock_x > 0) {
@@ -917,7 +914,7 @@ long gameplay(int game_delay) {
     mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
     timerstart = millis();
-      while(timerstart - millis() <= game_delay) {
+      while(timerstart - millis() <= 200) {
         if(pressed1 == false) {
           if (analogRead(1) > 1000) {
             if (rock_x > 0) {
@@ -1003,7 +1000,7 @@ long gameplay(int game_delay) {
   mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
     timerstart = millis();
-      while(timerstart - millis() <= game_delay) {
+      while(timerstart - millis() <= 200) {
         if(pressed1 == false) {
           if (analogRead(1) > 1000) {
             if (rock_x > 0) {
@@ -1068,7 +1065,7 @@ long gameplay(int game_delay) {
     mylcd.Set_Draw_color(CYAN);
     mylcd.Fill_Rectangle(rock_x, 230, rock_x+20, 250);
     timerstart = millis();
-      while(timerstart - millis() <= game_delay) {
+      while(timerstart - millis() <= 200) {
         if(pressed1 == false) {
           if (analogRead(1) > 1000) {
             if (rock_x > 0) {
@@ -1130,10 +1127,11 @@ long gameplay(int game_delay) {
   }
 }
 }
-}
 
-byte start(/*long score, long highscore*/) {
-  bool start = false;
+
+byte startscreen() {
+  byte difficulty = 1;
+  
     while(true) {
       //start screen
       mylcd.Set_Text_Back_colour(CYAN);
@@ -1153,7 +1151,7 @@ byte start(/*long score, long highscore*/) {
       mylcd.Print_String("High Score:", 5, 390);
       timerstart = millis();
       while(true) {
-        if(millis() - timerstart >= 1000) {
+        if(millis() - timerstart == 1023) {
           break;
         }
         if(analogRead(3) == 1023) {
@@ -1163,9 +1161,9 @@ byte start(/*long score, long highscore*/) {
     }
 }
 
-void game_over(long score/*, long highscore*/) {
+long game_over() {
+  EEPROM.get(0, high_score);
   while(true) {
-    bool start = false;
     //start screen
     mylcd.Set_Text_Back_colour(CYAN);
     mylcd.Fill_Screen(CYAN);
@@ -1184,22 +1182,21 @@ void game_over(long score/*, long highscore*/) {
     mylcd.Print_String("High Score:", 5, 390);
     timerstart = millis();
     while(true) {
-      if(millis() - timerstart >= 1000) {
+      if(millis() - timerstart == 1023) {
         break;
       }
       if(analogRead(3) == 1023) {
-        start = true;
+        return high_score;
       }
     }
-  if(start == true) {
-    break;
-  }
   }
 }
 
 void loop() {
-  start();
-  game_over(gameplay(200));
+  byte difficulty;
+  difficulty = startscreen();
+  score = gameplay(difficulty);
+  game_over();
   
   
 }
