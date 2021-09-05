@@ -13,6 +13,6 @@ I use the [LCDWIKI_GUI](https://github.com/lcdwiki/LCDWIKI_gui) core library and
 to write to the display. 
 You can see how to make it yourself [here](/installation). 
 
-##License
+## License
 
 Coming Soon...
