@@ -1,4 +1,4 @@
-[![FreeFall Logo](docs/pixil-frame-0.png "FreeFall")](https://shortsking.github.io/FreeFall)
+[![FreeFall Logo](pixil-frame-0.png "FreeFall")](https://shortsking.github.io/FreeFall)
 ## GamePlay
 
 FreeFall is a game in which you are a rock, which has unfortunately fallen from it's previous resting place. 
