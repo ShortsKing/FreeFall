@@ -25,10 +25,10 @@ Terms:
             and c. Whoever the software was received from, copied, downloaded and/or reproduced from any version of the FreeFall software, including any version of software based on or copied from FreeFall any number of times.
         
         2. Make sure that any Entity downloading or installing the software knows where the software is 
-        hosted aand that they can download it for FREE
+hosted aand that they can download it for FREE
         
         3. Include this license with the software, Unchanged, 
-        available to anyone with internet/data
+available to anyone with internet/data
         
 Under these terms, anyone in possesion of the software can do whatever they like with it, EXCEPT sell anything with the software preinstalled, unless given direct fully written permission from ShortsKing, John Peters.
    
