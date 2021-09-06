@@ -14,7 +14,7 @@ to write to the display.
 You can see how to make it yourself [here](/installation). 
 
 ## License
-```
+
 This License can be modified at any time with no warning. once the license has been changed, Any Entity in Possesion of software copied, downloaded and/or reproduced from any version of the FreeFall software, including any version of software based on or copied from FreeFall any number of times mustmodify the license included with their software to be exactly the license contained here:
 
 Terms:
@@ -31,4 +31,3 @@ Terms:
 Under these terms, anyone in possesion of the software can do whatever they like with it, EXCEPT sell anything with the software preinstalled, unless given direct fully written permission from ShortsKing, John Peters.
    
 this license applies to all entities in possesion of the software EXCEPT for ShortsKing, John Peters. The terms of this license may be broken if given direct written permission from ShortsKing, John Peters.
-```
