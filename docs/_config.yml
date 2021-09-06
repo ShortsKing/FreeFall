@@ -2,4 +2,4 @@ theme: minima
 title: FreeFall
 description: Current downloads have not been tested due to a fried Arduino Mega 2560. Sorry for the inconvenience!
 header_pages:
- - docs/Hardware/index.md
+ - Hardware/index.md
