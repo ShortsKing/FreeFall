@@ -1,4 +1,6 @@
-theme: jekyll-theme-cayman
+theme: minima
 title: FreeFall
-show-downloads: true
 description: Current downloads have not been tested due to a fried Arduino Mega 2560. Sorry for the inconvenience!
+header_pages:
+ - Installation/index.md
+ - Downloads/index.md
