@@ -1,5 +1,5 @@
-This License can be modified at any time with no warning. once the license has been changed, Any Entity in Possesion of software copied, downloaded and/or
-reproduced from any version of the FreeFall software, including any version of software based on or copied from FreeFall any number of times must
+This License can be modified at any time with no warning. once the license has been changed, Any Entity in Possesion of software copied, downloaded 
+and/or reproduced from any version of the FreeFall software, including any version of software based on or copied from FreeFall any number of times must
 
 Terms:
     Any Entity in Possesion of software copied, downloaded and/or reproduced from any version of the FreeFall software, including any version of software based on  
@@ -7,12 +7,12 @@ Terms:
         1. Give credit to:
             a. ShortsKing (John Peters)
             b. Anyone who modified the software before downloading
-            and c. Whoever the software was received from, copied, downloaded and/or reproduced from any version of the FreeFall software, including any version of 
-                   software based on or copied from FreeFall any number of times.
+            and c. Whoever the software was received from, copied, downloaded and/or reproduced from any version of the FreeFall software, including any 
+                   version of software based on or copied from FreeFall any number of times.
         included with the License available to anyone with data/internet, or available individually to anyone with data/internet
         
         2. Make sure that any Entity downloading or installing the software knows where the software is hosted aand that they can download it for FREE
         
-        3. 
+        3. Include this license with the software
    
 THIS IS NOT THE COMPLETE LICENSE AND DOES NOTHING LEGAL WHATSOEVER.    
